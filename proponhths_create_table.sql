@@ -1,5 +1,5 @@
 CREATE TABLE `PROPONHTHS` (
-  `kwdikos` int NOT NULL,
+  `kwdikos` int(7) NOT NULL,
   `onomateponymo` varchar(40) NOT NULL,
   `etiypiresias` int NOT NULL,
   `amivi` float NOT NULL,
