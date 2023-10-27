@@ -1,4 +1,4 @@
-CREATE TABLE `a8lhths` (
+CREATE TABLE `PROPONHTHS` (
   `kwdikos` int NOT NULL,
   `onomateponymo` varchar(40) NOT NULL,
   `etiypiresias` int NOT NULL,
