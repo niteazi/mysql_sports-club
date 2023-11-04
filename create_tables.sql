@@ -2,8 +2,8 @@
 CREATE TABLE `A8LITIS` (
   `aem` int(6) NOT NULL,
   `onomateponymo` varchar(40) NOT NULL,
-  `fylo` int NOT NULL,
-  `hmerominia eggrafis` float NOT NULL,
+  `fylo` varchar(10) NOT NULL CHECK (fylo in ('Andras', 'Gynaika')),
+  `hmerominia_eggrafis` date NOT NULL,
   PRIMARY KEY (`aem`)
 );
 
