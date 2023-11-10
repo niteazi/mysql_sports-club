@@ -12,7 +12,7 @@ CREATE TABLE `A8LITIS` (
   `fylo` varchar(10) NOT NULL CHECK (fylo in ('Andras', 'Gynaika')),
   `hmerominia_eggrafis` date NOT NULL,
   `kwdikos` int(7) NOT NULL,
-  FOREIGN KEY (`kwdikos`) REFERENCES PROPONHTHS(`kwdikos`)
+  FOREIGN KEY (`kwdikos`) REFERENCES PROPONHTHS(`kwdikos`) --foreign key references the primary key of Proponhths
 );
 
 
