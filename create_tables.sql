@@ -26,10 +26,11 @@ CREATE TABLE `PROPONHSH` (
   PRIMARY KEY (`kwdikos`)
 );
 
+--sxesh many-to-many so it needs a joining table https://www.youtube.com/watch?v=1eUn6lsZ7c4
 CREATE TABLE `PROPONHSH_PROPONHTHS` (
   `proponhsh_kwdikos` int(4) NOT NULL,
   `proponhtes_kwdikos` int(7) NOT NULL,
-  PRIMARY KEY (`proponhsh_kwdikos`, `proponhtes_kwdikos`),
+  PRIMARY KEY (`proponhsh_kwdikos`, `proponhtes_kwdikos`), --creates a composite primary key,it uses the combination of two or more columns to uniquely identify each row in the table.
   FOREIGN KEY (`proponhsh_kwdikos`) REFERENCES `PROPONHSH`(`kwdikos`),
   FOREIGN KEY (`proponhtes_kwdikos`) REFERENCES `PROPONHTHS`(`kwdikos`)
 );
