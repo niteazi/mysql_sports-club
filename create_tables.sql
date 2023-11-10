@@ -20,9 +20,9 @@ CREATE TABLE `A8LITIS` (
 
 CREATE TABLE `PROPONHSH` (
   `kwdikos` int(4) NOT NULL,
-  `wra dieksagwghs` TIME NOT NULL,
-  `hmera dieksagwghs` VARCHAR(10) NOT NULL,
-  `diarkeia se lepta` int(3) NOT NULL,
+  `wra_dieksagwghs` TIME NOT NULL,
+  `hmera_dieksagwghs` VARCHAR(10) NOT NULL,
+  `diarkeia_se_lepta` int(3) NOT NULL,
   PRIMARY KEY (`kwdikos`)
 );
 
