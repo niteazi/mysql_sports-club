@@ -110,14 +110,15 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   FOREIGN KEY (`proponhtes_kwdikos`) REFERENCES `PROPONHTHS`(`kwdikos_proponhth`)
 );
 
+#weak entity table
 CREATE TABLE IF NOT EXISTS `TRAUMATISMOS` (
-  `kwdikos_agwna` INT(4),
-  `kwdikos_proponhshs` INT(4),
+  `aem_athliti` int(6) NOT NULL,
   `typos_traumatismou` VARCHAR(30) NOT NULL,
   `anafora_symvantos` TEXT,
   `sovarotita` VARCHAR(20) NOT NULL,
-  FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`),
-  FOREIGN KEY (`kwdikos_proponhshs`) REFERENCES `PROPONHSH`(`kwdikos_proponhshs`)
+  FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`)
+  ON DELETE CASCADE,
+
 );
 
 --g n mporei n mpei sta statistika to apotelesma tou agwna
