@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `SEASON` (
 CREATE TABLE IF NOT EXISTS `ATHLIMA` (
   `onoma_athlimatos`  varchar(25) NOT NULL,
    `tropos_paixnidiou` varchar(10) NOT NULL CHECK (tropos_paixnidiou in ('omadiko', 'atomiko')),
-  `exoplismos` int(4) NOT NULL,
+  `exoplismos` int(4),
   `kwdikos_egkatastashs` int(3) NOT NULL,
   PRIMARY KEY (`onoma_athlimatos`),
   FOREIGN KEY (kwdikos_egkatastashs) REFERENCES EGKATASTASEIS(kwdikos_egkatastashs)
