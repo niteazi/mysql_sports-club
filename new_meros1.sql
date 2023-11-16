@@ -36,3 +36,26 @@ CREATE TABLE IF NOT EXISTS `ATHLIMA` (
   PRIMARY KEY (`onoma_athlimatos`),
   FOREIGN KEY (kwdikos_egkatastashs) REFERENCES EGKATASTASEIS(kwdikos_egkatastashs)
 );
+
+CREATE TABLE if not exists `PROPONHTHS` (
+  `kwdikos_proponhth` int(7) NOT NULL,
+  `onomateponymo` varchar(40) NOT NULL,
+  `etiypiresias` int(2) NOT NULL,
+  `amivi` float NOT NULL,
+  `thlefwno_epikoinwnias` int(10) NOT NULL,
+  UNIQUE (thlefwno_epikoinwnias)
+  PRIMARY KEY (`kwdikos`)
+);
+
+CREATE TABLE if not exists `A8LITIS` (
+  `aem` int(6) NOT NULL PRIMARY KEY,
+  `onomateponymo` varchar(40) NOT NULL,
+  `fylo` varchar(10) NOT NULL CHECK (fylo in ('Andras', 'Gynaika')),
+  `hmerominia_eggrafis` date NOT NULL,
+  `hmerominia_gennhshs` date NOT NULL,
+  `hlikia` int(2) NOT NULL,
+  `thlefwno_epikoinwnias` int(10) NOT NULL,
+  `kwdikos_proponhth` int(7) NOT NULL,
+  UNIQUE (thlefwno_epikoinwnias)
+  FOREIGN KEY (`kwdikos_proponhth`) REFERENCES PROPONHTHS(`kwdikos_proponhth`)
+);
