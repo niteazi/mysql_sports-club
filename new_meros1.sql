@@ -65,6 +65,7 @@ CREATE TABLE if not exists `PROPONHSH` (
   `diarkeia_se_lepta` int(3) NOT NULL,
   PRIMARY KEY (`kwdikos_proponhshs`)
 );
+--N:M pinakas athliti kai proponhseis
 CREATE TABLE if not exists `PROPONHSEIS_ATHLITI` (
   `aem_athliti` int(6) NOT NULL,
   `kwdikos_proponhshs` int(4) NOT NULL,
