@@ -116,6 +116,7 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
 --g n mporei n mpei sta statistika to apotelesma tou agwna
 CREATE INDEX idx_agwnas_apotelesma ON AGWNAS(apotelesma);
 
+--1:1 me agwna
 CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   `kwdikos_agwna` INT(4) NOT NULL,
   `apotelesma` VARCHAR(255) NOT NULL,
