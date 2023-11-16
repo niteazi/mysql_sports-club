@@ -37,11 +37,11 @@ CREATE TABLE IF NOT EXISTS `A8LIMA` (
 
 CREATE TABLE if not exists `PROPONHTHS` (
   `kwdikos_proponhth` int(7) NOT NULL,
+  `athlima` VARCHAR(25) NOT NULL,
   `onomateponymo` varchar(40) NOT NULL,
   `etiypiresias` int(2) NOT NULL,
   `amivi` float NOT NULL,
-  `thlefwno_epikoinwnias` VARCHAR(10) NOT NULL,
-  UNIQUE (thlefwno_epikoinwnias),
+  FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`),
   PRIMARY KEY (`kwdikos_proponhth`)
 );
 
