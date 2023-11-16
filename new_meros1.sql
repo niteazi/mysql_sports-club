@@ -73,9 +73,13 @@ CREATE TABLE IF NOT EXISTS `AGWNAS` (
 
 CREATE TABLE if not exists `PROPONHSH` (
   `kwdikos_proponhshs` int(4) NOT NULL,
+  `athlima` VARCHAR(25) NOT NULL,
+  `kwdikos_egkatastashs` int(3) NOT NULL,
   `wra_dieksagwghs` TIME NOT NULL,
   `hmera_dieksagwghs` VARCHAR(10) NOT NULL,
   `diarkeia_se_lepta` int(3) NOT NULL,
+  FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`),
+  FOREIGN KEY (`kwdikos_egkatastashs`) REFERENCES `EGKATASTASEIS`(`kwdikos_egkatastashs`),
   PRIMARY KEY (`kwdikos_proponhshs`)
 );
 
@@ -95,4 +99,13 @@ CREATE TABLE if not exists `AGWNES_ATHLITI` (
   PRIMARY KEY (`aem_athliti`, `kwdikos_agwna`),
   FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`),
   FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`)
+);
+
+--N:M pinakas proponhsh kai proponhths
+CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
+  `proponhsh_kwdikos` int(4) NOT NULL,
+  `proponhtes_kwdikos` int(7) NOT NULL,
+  PRIMARY KEY (`proponhsh_kwdikos`, `proponhtes_kwdikos`),
+  FOREIGN KEY (`proponhsh_kwdikos`) REFERENCES `PROPONHSH`(`kwdikos_proponhshs`),
+  FOREIGN KEY (`proponhtes_kwdikos`) REFERENCES `PROPONHTHS`(`kwdikos_proponhth`)
 );
