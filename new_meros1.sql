@@ -6,9 +6,7 @@ DROP TABLE IF EXISTS `EGKATASTASEIS`;
 DROP TABLE IF EXISTS `SEASON`;
 DROP TABLE IF EXISTS `ATHLIMA`;
 DROP TABLE IF EXISTS `A8LITIS`;
-DROP TABLE IF EXISTS `proponhsh_proponhths`; --prepei panw apo proponhsh proponhths gt apoteleitai apo auta? bgazei error alliws
-DROP TABLE IF EXISTS `proponhsh`;
-DROP TABLE IF EXISTS `proponhths`;
+DROP TABLE IF EXISTS `PROPONHSEIS_ATHLITI`;
 
 --CREATE TABLES
 
