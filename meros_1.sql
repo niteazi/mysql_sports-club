@@ -13,7 +13,7 @@ DROP TABLE IF EXISTS `PROPONHSEIS_ATHLITI`;
 CREATE TABLE IF NOT EXISTS `EGKATASTASEIS` (
   `kwdikos_egkatastashs` int(3) NOT NULL,
   `typos_gypedou` varchar(25) NOT NULL,
-  `xwrhtikothta`  int NOT NULL,
+  `xwrhtikothta`  INT NOT NULL,
   PRIMARY KEY (`kwdikos_egkatastashs`)
 );
 
@@ -120,15 +120,18 @@ CREATE TABLE IF NOT EXISTS `TRAUMATISMOS` (
   FOREIGN KEY (`kwdikos_proponhshs`) REFERENCES `PROPONHSH`(`kwdikos_proponhshs`)
 );
 
+--g n mporei n mpei sta statistika to apotelesma tou agwna
+CREATE INDEX idx_agwnas_apotelesma ON AGWNAS(apotelesma);
 
 CREATE TABLE IF NOT EXISTS `STATISTIKA` (
-  `kwdikos_agwna` INT(4),
+  `kwdikos_agwna` INT(4) NOT NULL,
   `apotelesma` VARCHAR(255) NOT NULL,
   `diarkeia_se_lepta` INT(3) NOT NULL,
   `arithmos_theatwn` INT(5) NOT NULL,
   `kairikes_synthikes` VARCHAR(30),
-  UNIQUE(kwdikos_agwna),
+  PRIMARY KEY (`kwdikos_agwna`),
   FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`),
-  FOREIGN KEY (`apotelesma`) REFERENCES `AGWNAS`(`apotelesma`)
+  FOREIGN KEY (`apotelesma`) REFERENCES `AGWNAS`(`apotelesma`),
+  UNIQUE (`kwdikos_agwna`)
 );
 
