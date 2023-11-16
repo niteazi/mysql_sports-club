@@ -111,15 +111,16 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
 );
 
 #weak entity table
-CREATE TABLE IF NOT EXISTS `TRAUMATISMOS` (
-  `aem_athliti` int(6) NOT NULL,
+ 
+  CREATE TABLE IF NOT EXISTS `TRAUMATISMOS` (
+  `aem_athliti` INT(6) NOT NULL,
+  `hmeromhnia` DATE NOT NULL,
   `typos_traumatismou` VARCHAR(30) NOT NULL,
   `anafora_symvantos` TEXT,
   `sovarotita` VARCHAR(20) NOT NULL,
-  PRIMARY KEY(`aem_athliti`),
-  FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`)
-  ON DELETE CASCADE,
-
+  `trauma_id` INT AUTO_INCREMENT,
+  PRIMARY KEY (`aem_athliti`, `trauma_id`),
+  FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`) ON DELETE CASCADE
 );
 
 --g n mporei n mpei sta statistika to apotelesma tou agwna
