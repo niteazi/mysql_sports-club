@@ -101,7 +101,7 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   FOREIGN KEY (`proponhtes_kwdikos`) REFERENCES `PROPONHTHS`(`kwdikos_proponhth`)
 );
 
-#weak entity table
+--weak entity table
  
   CREATE TABLE IF NOT EXISTS `TRAUMATISMOS` (
   `trauma_id` INT AUTO_INCREMENT,
