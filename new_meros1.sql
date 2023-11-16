@@ -5,7 +5,7 @@ CREATE DATABASE if NOT EXISTS sports_club;
 DROP TABLE IF EXISTS `EGKATASTASEIS`;
 DROP TABLE IF EXISTS `SEASON`;
 DROP TABLE IF EXISTS `ATHLIMA`;
-DROP TABLE IF EXISTS `a8litis`;
+DROP TABLE IF EXISTS `A8LITIS`;
 DROP TABLE IF EXISTS `proponhsh_proponhths`; --prepei panw apo proponhsh proponhths gt apoteleitai apo auta? bgazei error alliws
 DROP TABLE IF EXISTS `proponhsh`;
 DROP TABLE IF EXISTS `proponhths`;
@@ -42,20 +42,35 @@ CREATE TABLE if not exists `PROPONHTHS` (
   `onomateponymo` varchar(40) NOT NULL,
   `etiypiresias` int(2) NOT NULL,
   `amivi` float NOT NULL,
-  `thlefwno_epikoinwnias` int(10) NOT NULL,
-  UNIQUE (thlefwno_epikoinwnias)
-  PRIMARY KEY (`kwdikos`)
+  `thlefwno_epikoinwnias` VARCHAR(10) NOT NULL,
+  UNIQUE (thlefwno_epikoinwnias),
+  PRIMARY KEY (`kwdikos_proponhth`)
 );
 
-CREATE TABLE if not exists `A8LITIS` (
-  `aem` int(6) NOT NULL PRIMARY KEY,
-  `onomateponymo` varchar(40) NOT NULL,
-  `fylo` varchar(10) NOT NULL CHECK (fylo in ('Andras', 'Gynaika')),
-  `hmerominia_eggrafis` date NOT NULL,
-  `hmerominia_gennhshs` date NOT NULL,
-  `hlikia` int(2) NOT NULL,
-  `thlefwno_epikoinwnias` int(10) NOT NULL,
-  `kwdikos_proponhth` int(7) NOT NULL,
-  UNIQUE (thlefwno_epikoinwnias)
-  FOREIGN KEY (`kwdikos_proponhth`) REFERENCES PROPONHTHS(`kwdikos_proponhth`)
+CREATE TABLE IF NOT EXISTS `A8LITIS` (
+  `aem_athliti` INT(6) NOT NULL,
+  `onomateponymo` VARCHAR(40) NOT NULL,
+  `fylo` VARCHAR(10) NOT NULL CHECK (fylo IN ('Andras', 'Gynaika')),
+  `hmerominia_eggrafis` DATE NOT NULL,
+  `hmerominia_gennhshs` DATE NOT NULL,
+  `kwdikos_proponhth` INT(7) NOT NULL,
+  `athlima` VARCHAR(25) NOT NULL,
+  FOREIGN KEY (`kwdikos_proponhth`) REFERENCES `PROPONHTHS`(`kwdikos_proponhth`),
+  FOREIGN KEY (`athlima`) REFERENCES `ATHLIMA`(`onoma_athlimatos`),
+  PRIMARY KEY (`aem_athliti`)
+);
+
+CREATE TABLE if not exists `PROPONHSH` (
+  `kwdikos_proponhshs` int(4) NOT NULL,
+  `wra_dieksagwghs` TIME NOT NULL,
+  `hmera_dieksagwghs` VARCHAR(10) NOT NULL,
+  `diarkeia_se_lepta` int(3) NOT NULL,
+  PRIMARY KEY (`kwdikos_proponhshs`)
+);
+CREATE TABLE if not exists `PROPONHSEIS_ATHLITI` (
+  `aem_athliti` int(6) NOT NULL,
+  `kwdikos_proponhshs` int(4) NOT NULL,
+  PRIMARY KEY (`aem_athliti`, `kwdikos_proponhshs`),
+  FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`),
+  FOREIGN KEY (`kwdikos_proponhshs`) REFERENCES `PROPONHSH`(`kwdikos_proponhshs`)
 );
