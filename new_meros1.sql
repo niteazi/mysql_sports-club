@@ -2,10 +2,12 @@ DROP DATABASE IF EXISTS sports_club;
 CREATE DATABASE if NOT EXISTS sports_club;
 
 --drop TABLE
+DROP TABLE IF EXISTS `EGKATASTASEIS`;
+DROP TABLE IF EXISTS `SEASON`;
+DROP TABLE IF EXISTS `ATHLIMA`;
 DROP TABLE IF EXISTS `a8litis`;
 DROP TABLE IF EXISTS `proponhsh_proponhths`; --prepei panw apo proponhsh proponhths gt apoteleitai apo auta? bgazei error alliws
 DROP TABLE IF EXISTS `proponhsh`;
-
 DROP TABLE IF EXISTS `proponhths`;
 
 --CREATE TABLES
