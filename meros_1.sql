@@ -116,6 +116,7 @@ CREATE TABLE IF NOT EXISTS `TRAUMATISMOS` (
   `typos_traumatismou` VARCHAR(30) NOT NULL,
   `anafora_symvantos` TEXT,
   `sovarotita` VARCHAR(20) NOT NULL,
+  PRIMARY KEY(`aem_athliti`),
   FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`)
   ON DELETE CASCADE,
 
