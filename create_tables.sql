@@ -1,3 +1,4 @@
+
 --CREATE TABLES
 
 CREATE TABLE IF NOT EXISTS `EGKATASTASEIS` (
@@ -51,8 +52,8 @@ CREATE TABLE IF NOT EXISTS `AGWNAS` (
   `kwdikos_agwna` INT(4) NOT NULL,
   `epoxh_season` VARCHAR(20) NOT NULL,
   `etos_season` INT(4) NOT NULL,
-  `wra_dieksagwghs` TIME NOT NULL,
   `hmeromhnia_dieksagwghs` DATE NOT NULL,
+  `wra_dieksagwghs` TIME NOT NULL,
   `apotelesma` VARCHAR(255) NOT NULL,
   `eidos_match` ENUM('filiko', 'antagwnistiko') NOT NULL,
   `topothesia` VARCHAR(30) NOT NULL,
@@ -117,6 +118,7 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
 CREATE INDEX idx_agwnas_apotelesma ON AGWNAS(apotelesma);
 
 --1:1 me agwna
+
 CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   `kwdikos_agwna` INT(4) NOT NULL,
   `apotelesma` VARCHAR(255) NOT NULL,
