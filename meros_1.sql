@@ -18,7 +18,8 @@ DROP TABLE IF EXISTS `EGKATASTASEIS`;
 --CREATE TABLES
 
 CREATE TABLE IF NOT EXISTS `EGKATASTASEIS` (
-  `kwdikos_egkatastashs` int(3) NOT NULL,
+  `kwdikos_egkatastashs` int(3)  NOT NULL,
+  `onoma egkatastashs` varchar(25) NOT NULL,
   `typos_gypedou` varchar(25) NOT NULL,
   `xwrhtikothta`  INT NOT NULL,
   PRIMARY KEY (`kwdikos_egkatastashs`)
@@ -147,3 +148,24 @@ CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   UNIQUE (`kwdikos_agwna`)
 );
 
+--INSERT VALUES
+
+INSERT INTO EGKATASTASEIS
+VALUES 
+(123,'ghpedo podosfairou', 'kleisto', 200),
+(128,'ghpedo basket', 'kleisto', 200),
+(173,'ghpedo tennis', 'anoixto', 100);
+
+
+INSERT INTO SEASON
+VALUES 
+('Anoiksi',2022, 20, 15,5),
+('Ftinoporo',2022, 15, 10,5),
+('Anoiksi',2021, 10, 5,5);
+
+
+INSERT INTO A8LIMA
+VALUES 
+('Podosfairo', 'omadiko', 'mpala', 123),
+('Basket', 'omadiko', 'mpala', 128),
+('Tennis', 'atomiko', 'raketes', 173);

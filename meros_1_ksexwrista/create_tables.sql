@@ -2,7 +2,8 @@
 --CREATE TABLES
 
 CREATE TABLE IF NOT EXISTS `EGKATASTASEIS` (
-  `kwdikos_egkatastashs` int(3) NOT NULL,
+  `kwdikos_egkatastashs` int(3)  NOT NULL,
+  `onoma egkatastashs` varchar(25) NOT NULL,
   `typos_gypedou` varchar(25) NOT NULL,
   `xwrhtikothta`  INT NOT NULL,
   PRIMARY KEY (`kwdikos_egkatastashs`)
