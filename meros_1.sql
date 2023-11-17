@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `AGWNAS` (
   `wra_dieksagwghs` TIME NOT NULL,
   `apotelesma` VARCHAR(255) NOT NULL,
   `eidos_match` ENUM('filiko', 'antagwnistiko') NOT NULL,
-  `topothesia` VARCHAR(30) NOT NULL,
+  `topothesia` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`kwdikos_agwna`),
   FOREIGN KEY (`epoxh_season`, `etos_season`) REFERENCES `SEASON` (`epoxh`, `etos`)
 );
@@ -181,3 +181,15 @@ VALUES
 (123456, 'Dimitris Skourths', 'Andras', '2020-09-01', '2000-01-01', 1234567, 'Podosfairo'),
 (123457, 'Orfeas Dedes', 'Andras', '2021-09-05', '2001-05-12', 1234568, 'Basket'),
 (123458, 'Iosif Tsannis', 'Andras', '2019-10-10', '2000-03-15', 1234569, 'Tennis');
+
+INSERT INTO AGWNAS
+VALUES 
+(1234, 'Podosfairo','Anoiksi', 2022, '2022-05-01', '15:00:00', 'nikh', 'filiko', 'ghpedo podosfairou'),
+(2434,'Basket','Anoiksi', 2022, '2021-12-12', '17:00:00', 'htta', 'filiko', 'ghpedo Asteras '),
+(3344, 'Tennis','Anoiksi', 2022, '2022-03-23', '12:00:00', 'nikh', 'antagwnistiko', 'ghpedo Phgasos');
+
+INSERT INTO PROPONHSH
+VALUES 
+(1234, 'Podosfairo', 123, '13:00:00', 'Trith', 90),
+(2434, 'Basket', 128, '11:00:00', 'Deutera', 120),
+(3344, 'Tennis', 173, '10:00:00', 'Savvato', 60);

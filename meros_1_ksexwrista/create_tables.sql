@@ -51,15 +51,17 @@ CREATE TABLE IF NOT EXISTS `A8LITIS` (
 );
 CREATE TABLE IF NOT EXISTS `AGWNAS` (
   `kwdikos_agwna` INT(4) NOT NULL,
+  `athlima` VARCHAR(25) NOT NULL,
   `epoxh_season` VARCHAR(20) NOT NULL,
   `etos_season` INT(4) NOT NULL,
   `hmeromhnia_dieksagwghs` DATE NOT NULL,
   `wra_dieksagwghs` TIME NOT NULL,
   `apotelesma` VARCHAR(255) NOT NULL,
   `eidos_match` ENUM('filiko', 'antagwnistiko') NOT NULL,
-  `topothesia` VARCHAR(30) NOT NULL,
+  `topothesia` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`kwdikos_agwna`),
-  FOREIGN KEY (`epoxh_season`, `etos_season`) REFERENCES `SEASON` (`epoxh`, `etos`)
+  FOREIGN KEY (`epoxh_season`, `etos_season`) REFERENCES `SEASON` (`epoxh`, `etos`),
+  FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`)
 );
 
 
