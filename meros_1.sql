@@ -169,3 +169,15 @@ VALUES
 ('Podosfairo', 'omadiko', 'mpala', 123),
 ('Basket', 'omadiko', 'mpala', 128),
 ('Tennis', 'atomiko', 'raketes', 173);
+
+INSERT INTO PROPONHTHS
+VALUES
+(1234567, 'Podosfairo', 'Giorgos Gkolios', 2, 1000),
+(1234568, 'Basket', 'Giannis Kapis', 3, 1100),
+(1234569, 'Tennis', 'Xrhstos Dimitriadhs', 1, 900);
+
+INSERT INTO A8LITIS
+VALUES 
+(123456, 'Dimitris Skourths', 'Andras', '2020-09-01', '2000-01-01', 1234567, 'Podosfairo'),
+(123457, 'Orfeas Dedes', 'Andras', '2021-09-05', '2001-05-12', 1234568, 'Basket'),
+(123458, 'Iosif Tsannis', 'Andras', '2019-10-10', '2000-03-15', 1234569, 'Tennis');
