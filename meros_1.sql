@@ -190,6 +190,36 @@ VALUES
 
 INSERT INTO PROPONHSH
 VALUES 
-(1234, 'Podosfairo', 123, '13:00:00', 'Trith', 90),
-(2434, 'Basket', 128, '11:00:00', 'Deutera', 120),
-(3344, 'Tennis', 173, '10:00:00', 'Savvato', 60);
+(1111, 'Podosfairo', 123, '13:00:00', 'Trith', 90),
+(2222, 'Basket', 128, '11:00:00', 'Deutera', 120),
+(3333, 'Tennis', 173, '10:00:00', 'Savvato', 60);
+
+INSERT INTO PROPONHSEIS_ATHLITI
+VALUES 
+(123456, 1111),
+(123457, 2222),
+(123458, 3333);
+
+INSERT INTO AGWNES_ATHLITI
+VALUES 
+(123456, 1234),
+(123457, 2434),
+(123458, 3344);
+
+INSERT INTO PROPONHSH_PROPONHTHS
+VALUES 
+(1111, 1234567),
+(2222, 1234568),
+(3333, 1234569);
+
+INSERT INTO TRAUMATISMOS
+VALUES 
+(12345, 123456, '2023-10-10', 'katagma sto xeri', 'kakos', 'sovaro'),
+(23452, 123457, '2022-08-05', 'strampouligma astragalou', 'kakos', 'metrio'),
+(32445, 123458, '2022-11-13', 'travigma wmou', 'kakos', 'sovaro');
+
+INSERT INTO STATISTIKA
+VALUES 
+(1234,  90, 50, 'hlios'),
+(2434,  120, 100,NULL ),
+(3344, 60, 42, 'psixala');

@@ -107,7 +107,7 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
 --weak entity table
  
   CREATE TABLE IF NOT EXISTS `TRAUMATISMOS` (
-  `trauma_id` INT AUTO_INCREMENT,
+  `trauma_id` INT(5),
   `aem_athliti` INT(6) NOT NULL,
   `hmeromhnia` DATE NOT NULL,
   `typos_traumatismou` VARCHAR(30) NOT NULL,
@@ -118,19 +118,19 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
 );
 
 --g n mporei n mpei sta statistika to apotelesma tou agwna
-CREATE INDEX idx_agwnas_apotelesma ON AGWNAS(apotelesma);
+--CREATE INDEX idx_agwnas_apotelesma ON AGWNAS(apotelesma);
+  --`apotelesma` VARCHAR(255) NOT NULL,
+  --FOREIGN KEY (`apotelesma`) REFERENCES `AGWNAS`(`apotelesma`),
+
 
 --1:1 me agwna
-
 CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   `kwdikos_agwna` INT(4) NOT NULL,
-  `apotelesma` VARCHAR(255) NOT NULL,
   `diarkeia_se_lepta` INT(3) NOT NULL,
   `arithmos_theatwn` INT(5) NOT NULL,
   `kairikes_synthikes` VARCHAR(30),
   PRIMARY KEY (`kwdikos_agwna`),
   FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`),
-  FOREIGN KEY (`apotelesma`) REFERENCES `AGWNAS`(`apotelesma`),
   UNIQUE (`kwdikos_agwna`)
 );
 
