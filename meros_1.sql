@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `EGKATASTASEIS` (
 
 CREATE TABLE IF NOT EXISTS `SEASON` (
   `epoxh` VARCHAR(20) NOT NULL,
-  `etos` int(4) NOT NULL CHECK(etos BETWEEN 1980 AND 2100),
+  `etos` YEAR NOT NULL,
   `synolo_agwnwn` int(4) NOT NULL,
   `synolo_nikwn` int(3) NOT NULL,
   `synolo_httwn` int(3) NOT NULL,
@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `AGWNAS` (
   `kwdikos_agwna` INT(4) NOT NULL CHECK(kwdikos_agwna BETWEEN 1000 AND 9999),
   `athlima` VARCHAR(25) NOT NULL,
   `epoxh_season` VARCHAR(20) NOT NULL,
-  `etos` INT(4) NOT NULL CHECK(etos BETWEEN 1980 AND 2100),
+  `etos` YEAR NOT NULL,
   `hmeromhnia_dieksagwghs` DATE NOT NULL,
   `wra_dieksagwghs` TIME NOT NULL,
   `apotelesma` VARCHAR(40) NOT NULL,
