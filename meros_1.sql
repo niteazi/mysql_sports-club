@@ -141,14 +141,13 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   --FOREIGN KEY (`apotelesma`) REFERENCES `AGWNAS`(`apotelesma`),
 
 
---1:1 me agwna
+--1:1 me agwna ..xreiazetai primary key..weak entity???
 CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   `kwdikos_agwna` INT(4) NOT NULL CHECK(kwdikos_agwna BETWEEN 1000 AND 9999),
   `diarkeia_se_lepta` INT(3) NOT NULL,
   `arithmos_theatwn` INT(5) NOT NULL,
   `kairikes_synthikes` VARCHAR(30),
   `antipalos` VARCHAR(30),
-  PRIMARY KEY (`kwdikos_agwna`),
   FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`),
   UNIQUE (`kwdikos_agwna`)
 );
