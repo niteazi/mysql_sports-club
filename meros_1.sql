@@ -148,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   `arithmos_theatwn` INT(5) NOT NULL,
   `kairikes_synthikes` VARCHAR(30),
   `antipalos` VARCHAR(30),
-  FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`),
+  FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`) ON DELETE CASCADE,
   UNIQUE (`kwdikos_agwna`)
 );
 
