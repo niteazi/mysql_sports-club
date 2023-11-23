@@ -1,3 +1,4 @@
+
 CREATE TABLE IF NOT EXISTS `A8LIMA` (
   `onoma_athlimatos`  varchar(25) NOT NULL,
   `tropos_paixnidiou` ENUM('omadiko', 'atomiko') NOT NULL ,
@@ -7,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `A8LIMA` (
 
 CREATE TABLE IF NOT EXISTS `EGKATASTASEIS` (
   `kwdikos_egkatastashs` int(3)  NOT NULL CHECK(kwdikos_egkatastashs BETWEEN 100 AND 999),
-  `onoma egkatastashs` varchar(25) NOT NULL,
+  `onoma_egkatastashs` varchar(25) NOT NULL,
   `onoma_athlimatos` varchar(25) NOT NULL,
   `typos_gypedou` varchar(25) NOT NULL,
   `xwrhtikothta`  INT(4) NOT NULL,
@@ -119,14 +120,14 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   --FOREIGN KEY (`apotelesma`) REFERENCES `AGWNAS`(`apotelesma`),
 
 
---1:1 me agwna
+--1:1 me agwna ..xreiazetai primary key..weak entity???
 CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   `kwdikos_agwna` INT(4) NOT NULL CHECK(kwdikos_agwna BETWEEN 1000 AND 9999),
   `diarkeia_se_lepta` INT(3) NOT NULL,
   `arithmos_theatwn` INT(5) NOT NULL,
   `kairikes_synthikes` VARCHAR(30),
   `antipalos` VARCHAR(30),
-  PRIMARY KEY (`kwdikos_agwna`),
-  FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`),
+  FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`) ON DELETE CASCADE,
   UNIQUE (`kwdikos_agwna`)
 );
+
