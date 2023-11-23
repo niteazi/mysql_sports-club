@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `AGWNAS` (
   `hmeromhnia_dieksagwghs` DATE NOT NULL,
   `wra_dieksagwghs` TIME NOT NULL,
   `apotelesma` VARCHAR(40) NOT NULL,
-  `eidos_match` ENUM('filiko', 'antagwnistiko') NOT NULL,
+  `eidos_match` ENUM('filiko', 'agwnistiko') NOT NULL,
   `topothesia` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`kwdikos_agwna`),
   FOREIGN KEY (`epoxh_season`, `etos_season`) REFERENCES `SEASON` (`epoxh`, `etos`),
