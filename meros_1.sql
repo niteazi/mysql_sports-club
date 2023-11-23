@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `A8LIMA` (
 
 CREATE TABLE IF NOT EXISTS `EGKATASTASEIS` (
   `kwdikos_egkatastashs` int(3)  NOT NULL CHECK(kwdikos_egkatastashs BETWEEN 100 AND 999),
-  `onoma egkatastashs` varchar(25) NOT NULL,
+  `onoma_egkatastashs` varchar(25) NOT NULL,
   `onoma_athlimatos` varchar(25) NOT NULL,
   `typos_gypedou` varchar(25) NOT NULL,
   `xwrhtikothta`  INT(4) NOT NULL,
