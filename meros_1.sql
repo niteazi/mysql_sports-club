@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS sports_club;
-CREATE DATABASE if NOT EXISTS sports_club;
+CREATE DATABASE IF NOT EXISTS sports_club;
 
 --drop TABLES
 DROP TABLE IF EXISTS `STATISTIKA`;
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `A8LIMA` (
   `exoplismos`TEXT,
   `kwdikos_egkatastashs` int(3) NOT NULL,
   PRIMARY KEY (`onoma_athlimatos`),
-  FOREIGN KEY (kwdikos_egkatastashs) REFERENCES EGKATASTASEIS(kwdikos_egkatastashs)
+  FOREIGN KEY (kwdikos_egkatastashs) REFERENCES EGKATASTASEIS(kwdikos_egkatastashs) 
 );
 
 CREATE TABLE if not exists `PROPONHTHS` (
