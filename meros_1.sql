@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `SEASON` (
 
 
 CREATE TABLE if not exists `PROPONHTHS` (
-  `kwdikos_proponhth` VARCHAR(7) NOT NULL,
+  `kwdikos_proponhth` VARCHAR(7) NOT NULL(LENGTH(kwdikos_proponhth) = 7),
   `athlima` VARCHAR(25) NOT NULL,
   `onomateponymo`  VARCHAR(40) NOT NULL,
   `etiypiresias` int(2) NOT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `A8LITIS` (
   `fylo` ENUM('Andras', 'Gynaika') NOT NULL,
   `hmerominia_eggrafis` DATE NOT NULL,
   `hmerominia_gennhshs` DATE NOT NULL,
-  `kwdikos_proponhth` VARCHAR(7) NOT NULL,
+  `kwdikos_proponhth` VARCHAR(7) NOT NULL (LENGTH(kwdikos_proponhth) = 7),
   `athlima` VARCHAR(25) NOT NULL,
   FOREIGN KEY (`kwdikos_proponhth`) REFERENCES `PROPONHTHS`(`kwdikos_proponhth`),
   FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`),
@@ -118,7 +118,7 @@ CREATE TABLE if not exists `AGWNES_ATHLITI` (
 --N:M pinakas proponhsh kai proponhths
 CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   `proponhsh_kwdikos` int(4) NOT NULL (proponhsh_kwdikos BETWEEN 1000 AND 9999),
-  `proponhtes_kwdikos` VARCHAR(7) NOT NULL,
+  `proponhtes_kwdikos` VARCHAR(7) NOT NULL (LENGTH(kwdikos_proponhth) = 7),
   PRIMARY KEY (`proponhsh_kwdikos`, `proponhtes_kwdikos`),
   FOREIGN KEY (`proponhsh_kwdikos`) REFERENCES `PROPONHSH`(`kwdikos_proponhshs`),
   FOREIGN KEY (`proponhtes_kwdikos`) REFERENCES `PROPONHTHS`(`kwdikos_proponhth`)
