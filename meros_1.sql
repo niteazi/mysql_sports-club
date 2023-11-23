@@ -158,12 +158,17 @@ CREATE TABLE IF NOT EXISTS `STATISTIKA` (
 
 
 --INSERT VALUES
+INSERT INTO A8LIMA
+VALUES 
+('Podosfairo', 'omadiko', 'mpala'),
+('Basket', 'omadiko', 'mpala'),
+('Tennis', 'atomiko', 'raketes');
 
 INSERT INTO EGKATASTASEIS
 VALUES 
-(123,'ghpedo podosfairou', 'kleisto', 200),
-(128,'ghpedo basket', 'kleisto', 200),
-(173,'ghpedo tennis', 'anoixto', 100);
+(123,'ghpedo podosfairou','Podosfairo', 'kleisto', 200),
+(128,'ghpedo basket','Basket', 'kleisto', 200),
+(173,'ghpedo tennis', 'Tennis','anoixto', 100);
 
 
 INSERT INTO SEASON
@@ -173,11 +178,7 @@ VALUES
 ('Anoiksi',2021, 10, 5,5);
 
 
-INSERT INTO A8LIMA
-VALUES 
-('Podosfairo', 'omadiko', 'mpala', 123),
-('Basket', 'omadiko', 'mpala', 128),
-('Tennis', 'atomiko', 'raketes', 173);
+
 
 INSERT INTO PROPONHTHS
 VALUES
