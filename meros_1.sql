@@ -47,7 +47,6 @@ CREATE TABLE IF NOT EXISTS `SEASON` (
 );
 
 
-
 CREATE TABLE if not exists `PROPONHTHS` (
   `kwdikos_proponhth` VARCHAR(7) NOT NULL,
   `athlima` VARCHAR(25) NOT NULL,
@@ -150,6 +149,7 @@ CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   `diarkeia_se_lepta` INT(3) NOT NULL,
   `arithmos_theatwn` INT(5) NOT NULL,
   `kairikes_synthikes` VARCHAR(30),
+  `antipalos` VARCHAR(30),
   PRIMARY KEY (`kwdikos_agwna`),
   FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`),
   UNIQUE (`kwdikos_agwna`)
