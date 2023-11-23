@@ -1,10 +1,14 @@
---INSERT VALUES
+INSERT INTO A8LIMA
+VALUES 
+('Podosfairo', 'omadiko', 'mpala'),
+('Basket', 'omadiko', 'mpala'),
+('Tennis', 'atomiko', 'raketes');
 
 INSERT INTO EGKATASTASEIS
 VALUES 
-(123,'ghpedo podosfairou', 'kleisto', 200),
-(128,'ghpedo basket', 'kleisto', 200),
-(173,'ghpedo tennis', 'anoixto', 100);
+(123,'ghpedo podosfairou','Podosfairo', 'kleisto', 200),
+(128,'ghpedo basket','Basket', 'kleisto', 200),
+(173,'ghpedo tennis', 'Tennis','anoixto', 100);
 
 
 INSERT INTO SEASON
@@ -13,12 +17,6 @@ VALUES
 ('Ftinoporo',2022, 15, 10,5),
 ('Anoiksi',2021, 10, 5,5);
 
-
-INSERT INTO A8LIMA
-VALUES 
-('Podosfairo', 'omadiko', 'mpala', 123),
-('Basket', 'omadiko', 'mpala', 128),
-('Tennis', 'atomiko', 'raketes', 173);
 
 INSERT INTO PROPONHTHS
 VALUES
@@ -70,6 +68,6 @@ VALUES
 
 INSERT INTO STATISTIKA
 VALUES 
-(1234,  90, 50, 'hlios'),
-(2434,  120, 100,NULL ),
-(3344, 60, 42, 'psixala');
+(1234,  90, 50, 'hlios','Asteras Korinthou'),
+(2434,  120, 100,NULL,'Aikitoi Xanthis' ),
+(3344, 60, 42, 'psixala', 'Giannis Papadopoulos');
