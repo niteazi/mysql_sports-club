@@ -20,9 +20,10 @@ DROP TABLE IF EXISTS `A8LIMA`;
 
 --CREATE TABLES
 
+
 CREATE TABLE IF NOT EXISTS `A8LIMA` (
   `onoma_athlimatos`  varchar(25) NOT NULL,
-  `tropos_paixnidiou` ENUM('omadiko', 'atomiko') NOT NULL ,
+  `tropos_paixnidiou` VARCHAR(10) NOT NULL CHECK(tropos_paixnidiou IN ('omadiko', 'atomiko')),
   `exoplismos` TINYTEXT,
   PRIMARY KEY (`onoma_athlimatos`)
 );
@@ -60,7 +61,7 @@ CREATE TABLE if not exists `PROPONHTHS` (
 CREATE TABLE IF NOT EXISTS `A8LITIS` (
   `aem_athliti` INT(6) NOT NULL CHECK(aem_athliti BETWEEN 100000 AND 999999),
   `onomateponymo` VARCHAR(40) NOT NULL,
-  `fylo` ENUM('Andras', 'Gynaika') NOT NULL,
+  `fylo` VARCHAR(10) NOT NULL CHECK(fylo IN ('Andras', 'Gynaika')),
   `hmerominia_eggrafis` DATE NOT NULL,
   `hmerominia_gennhshs` DATE NOT NULL,
   `kwdikos_proponhth` VARCHAR(7) NOT NULL CHECK(LENGTH(kwdikos_proponhth) = 7),
@@ -77,8 +78,8 @@ CREATE TABLE IF NOT EXISTS `AGWNAS` (
   `hmeromhnia_dieksagwghs` DATE NOT NULL,
   `wra_dieksagwghs` TIME NOT NULL,
   `apotelesma` VARCHAR(40) NOT NULL,
-  `eidos_match` ENUM('filiko', 'agwnistiko') NOT NULL,
-  `topothesia` ENUM('edra','ektos edras') NOT NULL,
+  `eidos_match` VARCHAR(20) NOT NULL CHECK(eidos_match IN ('filiko', 'agwnistiko')),
+  `topothesia` VARCHAR(20) NOT NULL CHECK(topothesia IN ('edra','ektos edras')),
   PRIMARY KEY (`kwdikos_agwna`),
   FOREIGN KEY (`epoxh_season`, `etos`) REFERENCES `SEASON` (`epoxh`, `etos`),
   FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`)
@@ -151,6 +152,7 @@ CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`) ON DELETE CASCADE,
   UNIQUE (`kwdikos_agwna`)
 );
+
 
 
 
