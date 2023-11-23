@@ -121,7 +121,7 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
 --weak entity table
  
   CREATE TABLE IF NOT EXISTS `TRAUMATISMOS` (
-  `trauma_id` INT AUTO_INCREMENT,
+  `trauma_id` INT,
   `aem_athliti` INT(6) NOT NULL,
   `hmeromhnia` DATE NOT NULL,
   `typos_traumatismou` VARCHAR(30) NOT NULL,
