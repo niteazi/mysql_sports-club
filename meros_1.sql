@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `AGWNAS` (
   `wra_dieksagwghs` TIME NOT NULL,
   `apotelesma` VARCHAR(40) NOT NULL,
   `eidos_match` ENUM('filiko', 'agwnistiko') NOT NULL,
-  `topothesia` VARCHAR(50) NOT NULL,
+  `topothesia` ENUM('edra','ektos edras') NOT NULL,
   PRIMARY KEY (`kwdikos_agwna`),
   FOREIGN KEY (`epoxh_season`, `etos_season`) REFERENCES `SEASON` (`epoxh`, `etos`),
   FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`)
