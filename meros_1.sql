@@ -230,5 +230,5 @@ VALUES
 INSERT INTO STATISTIKA
 VALUES 
 (1234,  90, 50, 'hlios','Asteras Korinthou'),
-(2434,  120, 100,NULL,'Anikitoi Xanthis' ),
+(2434,  120, 100,NULL,'Aikitoi Xanthis' ),
 (3344, 60, 42, 'psixala', 'Giannis');
