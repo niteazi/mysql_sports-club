@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `SEASON` (
 CREATE TABLE if not exists `PROPONHTHS` (
   `kwdikos_proponhth` VARCHAR(7) NOT NULL,
   `athlima` VARCHAR(25) NOT NULL,
-  `onomateponymo` Στον αθλητικό σύλλογο περιέχονται (40) NOT NULL,
+  `onomateponymo`  VARCHAR(40) NOT NULL,
   `etiypiresias` int(2) NOT NULL,
   `amivi` float NOT NULL,
   FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`),
