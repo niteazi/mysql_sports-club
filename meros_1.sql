@@ -12,18 +12,30 @@ DROP TABLE IF EXISTS `PROPONHSH`;
 DROP TABLE IF EXISTS `AGWNAS`;
 DROP TABLE IF EXISTS `A8LITIS`;
 DROP TABLE IF EXISTS `PROPONHTHS`;
-DROP TABLE IF EXISTS `A8LIMA`;
 DROP TABLE IF EXISTS `SEASON`;
 DROP TABLE IF EXISTS `EGKATASTASEIS`;
 
+DROP TABLE IF EXISTS `A8LIMA`;
+
+
 --CREATE TABLES
+
+
+CREATE TABLE IF NOT EXISTS `A8LIMA` (
+  `onoma_athlimatos`  varchar(25) NOT NULL,
+  `tropos_paixnidiou` ENUM('omadiko', 'atomiko') NOT NULL ,
+  `exoplismos` TINYTEXT,
+  PRIMARY KEY (`onoma_athlimatos`)
+);
 
 CREATE TABLE IF NOT EXISTS `EGKATASTASEIS` (
   `kwdikos_egkatastashs` int(3)  NOT NULL,
   `onoma egkatastashs` varchar(25) NOT NULL,
+  `onoma_athlimatos` varchar(25) NOT NULL,
   `typos_gypedou` varchar(25) NOT NULL,
   `xwrhtikothta`  INT NOT NULL,
-  PRIMARY KEY (`kwdikos_egkatastashs`)
+  PRIMARY KEY (`kwdikos_egkatastashs`),
+  foreign key (`onoma_athlimatos`) references `A8LIMA`(`onoma_athlimatos`)
 );
 
 CREATE TABLE IF NOT EXISTS `SEASON` (
@@ -35,14 +47,7 @@ CREATE TABLE IF NOT EXISTS `SEASON` (
   PRIMARY KEY (epoxh, etos)
 );
 
-CREATE TABLE IF NOT EXISTS `A8LIMA` (
-  `onoma_athlimatos`  varchar(25) NOT NULL,
-  `tropos_paixnidiou` ENUM('omadiko', 'atomiko') NOT NULL ,
-  `exoplismos` TINYTEXT,
-  `kwdikos_egkatastashs` int(3) NOT NULL,
-  PRIMARY KEY (`onoma_athlimatos`),
-  FOREIGN KEY (kwdikos_egkatastashs) REFERENCES EGKATASTASEIS(kwdikos_egkatastashs) 
-);
+
 
 CREATE TABLE if not exists `PROPONHTHS` (
   `kwdikos_proponhth` VARCHAR(7) NOT NULL,
