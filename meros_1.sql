@@ -191,9 +191,9 @@ VALUES
 
 INSERT INTO AGWNAS
 VALUES 
-(1234, 'Podosfairo','Anoiksi', 2022, '2022-05-01', '15:00:00', 'nikh', 'filiko', 'ghpedo podosfairou'),
-(2434,'Basket','Anoiksi', 2022, '2021-12-12', '17:00:00', 'htta', 'filiko', 'ghpedo Asteras '),
-(3344, 'Tennis','Anoiksi', 2022, '2022-03-23', '12:00:00', 'nikh', 'antagwnistiko', 'ghpedo Phgasos');
+(1234, 'Podosfairo','Anoiksi', 2022, '2022-05-01', '15:00:00', 'nikh', 'filiko', 'edra'),
+(2434,'Basket','Anoiksi', 2022, '2021-12-12', '17:00:00', 'htta', 'filiko', 'edra'),
+(3344, 'Tennis','Anoiksi', 2022, '2022-03-23', '12:00:00', 'nikh', 'agwnistiko', 'ektos edras');
 
 INSERT INTO PROPONHSH
 VALUES 
@@ -221,15 +221,14 @@ VALUES
 
 INSERT INTO TRAUMATISMOS
 VALUES 
-(12345, 123456, '2023-10-10', 'katagma sto xeri', 'kakos', 'sovaro'),
-(23452, 123457, '2022-08-05', 'strampouligma astragalou', 'kakos', 'metrio'),
-(32445, 123458, '2022-11-13', 'travigma wmou', 'kakos', 'sovaro');
+(123456, '2023-10-10', 'katagma sto xeri', 'kakos', 'sovaro'),
+(123457, '2022-08-05', 'strampouligma astragalou', 'kakos', 'metrio'),
+(123458, '2022-11-13', 'travigma wmou', 'kakos', 'sovaro');
 
 INSERT INTO STATISTIKA
 VALUES 
 (1234,  90, 50, 'hlios','Asteras Korinthou'),
 (2434,  120, 100,NULL,'Aikitoi Xanthis' ),
 (3344, 60, 42, 'psixala', 'Giannis Papadopoulos');
-
 
 --den exoun mpei values gia pinakes N:M 
