@@ -118,7 +118,7 @@ CREATE TABLE if not exists `AGWNES_ATHLITI` (
 --N:M pinakas proponhsh kai proponhths
 CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   `proponhsh_kwdikos` int(4) NOT NULL,
-  `proponhtes_kwdikos` int(7) NOT NULL,
+  `proponhtes_kwdikos` VARCHAR(7) NOT NULL,
   PRIMARY KEY (`proponhsh_kwdikos`, `proponhtes_kwdikos`),
   FOREIGN KEY (`proponhsh_kwdikos`) REFERENCES `PROPONHSH`(`kwdikos_proponhshs`),
   FOREIGN KEY (`proponhtes_kwdikos`) REFERENCES `PROPONHTHS`(`kwdikos_proponhth`)
