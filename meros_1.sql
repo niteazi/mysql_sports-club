@@ -1,4 +1,4 @@
---create / delete Database
+-- drop/create Database
 DROP DATABASE IF EXISTS sports_club;
 CREATE DATABASE IF NOT EXISTS sports_club;
 
