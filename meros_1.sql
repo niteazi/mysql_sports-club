@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `A8LIMA` (
 );
 
 CREATE TABLE IF NOT EXISTS `EGKATASTASEIS` (
-  `kwdikos_egkatastashs` int(3)  NOT NULL,
+  `kwdikos_egkatastashs` int(3)  NOT NULL (kwdikos_egkatastashs BETWEEN 100 AND 999),
   `onoma egkatastashs` varchar(25) NOT NULL,
   `onoma_athlimatos` varchar(25) NOT NULL,
   `typos_gypedou` varchar(25) NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `EGKATASTASEIS` (
 
 CREATE TABLE IF NOT EXISTS `SEASON` (
   `epoxh` VARCHAR(20) NOT NULL,
-  `etos` int(4) NOT NULL,
+  `etos` int(4) NOT NULL (etos_season BETWEEN 1980 AND YEAR(CURDATE()) + 1),
   `synolo_agwnwn` int(4) NOT NULL,
   `synolo_nikwn` int(3) NOT NULL,
   `synolo_httwn` int(3) NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE if not exists `PROPONHTHS` (
 );
 
 CREATE TABLE IF NOT EXISTS `A8LITIS` (
-  `aem_athliti` INT(6) NOT NULL,
+  `aem_athliti` INT(6) NOT NULL (aem_athliti BETWEEN 100000 AND 999999),
   `onomateponymo` VARCHAR(40) NOT NULL,
   `fylo` ENUM('Andras', 'Gynaika') NOT NULL,
   `hmerominia_eggrafis` DATE NOT NULL,
@@ -70,10 +70,10 @@ CREATE TABLE IF NOT EXISTS `A8LITIS` (
   PRIMARY KEY (`aem_athliti`)
 );
 CREATE TABLE IF NOT EXISTS `AGWNAS` (
-  `kwdikos_agwna` INT(4) NOT NULL,
+  `kwdikos_agwna` INT(4) NOT NULL (kwdikos_agwna BETWEEN 1000 AND 9999),
   `athlima` VARCHAR(25) NOT NULL,
   `epoxh_season` VARCHAR(20) NOT NULL,
-  `etos_season` INT(4) NOT NULL,
+  `etos_season` INT(4) NOT NULL (etos_season BETWEEN 1980 AND YEAR(CURDATE()) + 1),
   `hmeromhnia_dieksagwghs` DATE NOT NULL,
   `wra_dieksagwghs` TIME NOT NULL,
   `apotelesma` VARCHAR(40) NOT NULL,
@@ -86,9 +86,9 @@ CREATE TABLE IF NOT EXISTS `AGWNAS` (
 
 
 CREATE TABLE if not exists `PROPONHSH` (
-  `kwdikos_proponhshs` int(4) NOT NULL,
+  `kwdikos_proponhshs` int(4) NOT NULL (kwdikos_proponhshs BETWEEN 1000 AND 9999),
   `athlima` VARCHAR(25) NOT NULL,
-  `kwdikos_egkatastashs` int(3) NOT NULL,
+  `kwdikos_egkatastashs` int(3) NOT NULL (kwdikos_egkatastashs BETWEEN 100 AND 999),
   `wra_dieksagwghs` TIME NOT NULL,
   `hmera_dieksagwghs` VARCHAR(10) NOT NULL,
   `diarkeia_se_lepta` int(3) NOT NULL,
@@ -99,8 +99,8 @@ CREATE TABLE if not exists `PROPONHSH` (
 
 --N:M pinakas athliti kai proponhseis
 CREATE TABLE if not exists `PROPONHSEIS_ATHLITI` (
-  `aem_athliti` int(6) NOT NULL,
-  `kwdikos_proponhshs` int(4) NOT NULL,
+  `aem_athliti` int(6) NOT NULL (aem_athliti BETWEEN 100000 AND 999999),
+  `kwdikos_proponhshs` int(4) NOT NULL (kwdikos_proponhshs BETWEEN 1000 AND 9999),
   PRIMARY KEY (`aem_athliti`, `kwdikos_proponhshs`),
   FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`),
   FOREIGN KEY (`kwdikos_proponhshs`) REFERENCES `PROPONHSH`(`kwdikos_proponhshs`)
@@ -108,8 +108,8 @@ CREATE TABLE if not exists `PROPONHSEIS_ATHLITI` (
 
 --N:M pinakas athliti kai agwnas
 CREATE TABLE if not exists `AGWNES_ATHLITI` (
-  `aem_athliti` int(6) NOT NULL,
-  `kwdikos_agwna` int(4) NOT NULL,
+  `aem_athliti` int(6) NOT NULL (aem_athliti BETWEEN 100000 AND 999999) , 
+  `kwdikos_agwna` int(4) NOT NULL (kwdikos_agwna BETWEEN 1000 AND 9999),
   PRIMARY KEY (`aem_athliti`, `kwdikos_agwna`),
   FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`),
   FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`)
@@ -117,7 +117,7 @@ CREATE TABLE if not exists `AGWNES_ATHLITI` (
 
 --N:M pinakas proponhsh kai proponhths
 CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
-  `proponhsh_kwdikos` int(4) NOT NULL,
+  `proponhsh_kwdikos` int(4) NOT NULL (proponhsh_kwdikos BETWEEN 1000 AND 9999),
   `proponhtes_kwdikos` VARCHAR(7) NOT NULL,
   PRIMARY KEY (`proponhsh_kwdikos`, `proponhtes_kwdikos`),
   FOREIGN KEY (`proponhsh_kwdikos`) REFERENCES `PROPONHSH`(`kwdikos_proponhshs`),
@@ -127,7 +127,7 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
 --weak entity table
  
   CREATE TABLE IF NOT EXISTS `TRAUMATISMOS` (
-  `trauma_id` INT(5),
+  `trauma_id` INT(5) (trauma_id BETWEEN 10000 AND 99999),
   `aem_athliti` INT(6) NOT NULL,
   `hmeromhnia` DATE NOT NULL,
   `typos_traumatismou` VARCHAR(30) NOT NULL,
@@ -145,7 +145,7 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
 
 --1:1 me agwna
 CREATE TABLE IF NOT EXISTS `STATISTIKA` (
-  `kwdikos_agwna` INT(4) NOT NULL,
+  `kwdikos_agwna` INT(4) NOT NULL (kwdikos_agwna BETWEEN 1000 AND 9999),
   `diarkeia_se_lepta` INT(3) NOT NULL,
   `arithmos_theatwn` INT(5) NOT NULL,
   `kairikes_synthikes` VARCHAR(30),
