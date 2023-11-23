@@ -176,8 +176,6 @@ VALUES
 ('Anoiksi',2021, 10, 5,5);
 
 
-
-
 INSERT INTO PROPONHTHS
 VALUES
 (1234567, 'Podosfairo', 'Giorgos Gkolios', 2, 1000),
