@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `A8LITIS` (
   `fylo` ENUM('Andras', 'Gynaika') NOT NULL,
   `hmerominia_eggrafis` DATE NOT NULL,
   `hmerominia_gennhshs` DATE NOT NULL,
-  `kwdikos_proponhth` INT(7) NOT NULL,
+  `kwdikos_proponhth` VARCHAR(7) NOT NULL,
   `athlima` VARCHAR(25) NOT NULL,
   FOREIGN KEY (`kwdikos_proponhth`) REFERENCES `PROPONHTHS`(`kwdikos_proponhth`),
   FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`),
