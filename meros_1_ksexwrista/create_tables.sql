@@ -76,7 +76,6 @@ CREATE TABLE if not exists `PROPONHSH` (
   PRIMARY KEY (`kwdikos_proponhshs`)
 );
 
---N:M pinakas athliti kai proponhseis
 CREATE TABLE if not exists `PROPONHSEIS_ATHLITI` (
   `aem_athliti` int(6) NOT NULL CHECK(aem_athliti BETWEEN 100000 AND 999999),
   `kwdikos_proponhshs` int(4) NOT NULL CHECK(kwdikos_proponhshs BETWEEN 1000 AND 9999),
@@ -85,7 +84,6 @@ CREATE TABLE if not exists `PROPONHSEIS_ATHLITI` (
   FOREIGN KEY (`kwdikos_proponhshs`) REFERENCES `PROPONHSH`(`kwdikos_proponhshs`)
 );
 
---N:M pinakas athliti kai agwnas
 CREATE TABLE if not exists `AGWNES_ATHLITI` (
   `aem_athliti` int(6) NOT NULL CHECK(aem_athliti BETWEEN 100000 AND 999999) , 
   `kwdikos_agwna` int(4) NOT NULL CHECK(kwdikos_agwna BETWEEN 1000 AND 9999),
@@ -94,7 +92,6 @@ CREATE TABLE if not exists `AGWNES_ATHLITI` (
   FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`)
 );
 
---N:M pinakas proponhsh kai proponhths
 CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   `proponhsh_kwdikos` int(4) NOT NULL CHECK(proponhsh_kwdikos BETWEEN 1000 AND 9999),
   `proponhtes_kwdikos` VARCHAR(7) NOT NULL CHECK(LENGTH(proponhtes_kwdikos) = 7),
@@ -103,7 +100,6 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   FOREIGN KEY (`proponhtes_kwdikos`) REFERENCES `PROPONHTHS`(`kwdikos_proponhth`)
 );
 
---weak entity table
  
   CREATE TABLE IF NOT EXISTS `TRAUMATISMOS` (
   `aem_athliti` INT(6) NOT NULL,
@@ -114,13 +110,7 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`) ON DELETE CASCADE
 );
 
---g n mporei n mpei sta statistika to apotelesma tou agwna
---CREATE INDEX idx_agwnas_apotelesma ON AGWNAS(apotelesma);
-  --`apotelesma` VARCHAR(255) NOT NULL,
-  --FOREIGN KEY (`apotelesma`) REFERENCES `AGWNAS`(`apotelesma`),
 
-
---1:1 me agwna ..xreiazetai primary key..weak entity???
 CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   `kwdikos_agwna` INT(4) NOT NULL CHECK(kwdikos_agwna BETWEEN 1000 AND 9999),
   `diarkeia_se_lepta` INT(3) NOT NULL,
