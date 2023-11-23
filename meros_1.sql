@@ -20,7 +20,6 @@ DROP TABLE IF EXISTS `A8LIMA`;
 
 --CREATE TABLES
 
-
 CREATE TABLE IF NOT EXISTS `A8LIMA` (
   `onoma_athlimatos`  varchar(25) NOT NULL,
   `tropos_paixnidiou` ENUM('omadiko', 'atomiko') NOT NULL ,
@@ -33,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `EGKATASTASEIS` (
   `onoma egkatastashs` varchar(25) NOT NULL,
   `onoma_athlimatos` varchar(25) NOT NULL,
   `typos_gypedou` varchar(25) NOT NULL,
-  `xwrhtikothta`  INT NOT NULL,
+  `xwrhtikothta`  INT(4) NOT NULL,
   PRIMARY KEY (`kwdikos_egkatastashs`),
   foreign key (`onoma_athlimatos`) references `A8LIMA`(`onoma_athlimatos`)
 );
