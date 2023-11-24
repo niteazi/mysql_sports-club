@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `A8LITIS` (
   `kwdikos_proponhth` VARCHAR(7) NOT NULL CHECK(LENGTH(kwdikos_proponhth) = 7),
   `athlima` VARCHAR(25) NOT NULL,
   FOREIGN KEY (`kwdikos_proponhth`) REFERENCES `PROPONHTHS`(`kwdikos_proponhth`),
-  FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`),
+  --FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`),
   PRIMARY KEY (`aem_athliti`)
 );
 CREATE TABLE IF NOT EXISTS `AGWNAS` (
@@ -66,23 +66,12 @@ CREATE TABLE IF NOT EXISTS `AGWNAS` (
 
 CREATE TABLE if not exists `PROPONHSH` (
   `kwdikos_proponhshs` int(4) NOT NULL CHECK(kwdikos_proponhshs BETWEEN 1000 AND 9999),
-  `athlima` VARCHAR(25) NOT NULL,
-  `kwdikos_egkatastashs` int(3) NOT NULL CHECK(kwdikos_egkatastashs BETWEEN 100 AND 999),
   `wra_dieksagwghs` TIME NOT NULL,
   `hmera_dieksagwghs` VARCHAR(10) NOT NULL,
   `diarkeia_se_lepta` int(3) NOT NULL,
-  FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`),
-  FOREIGN KEY (`kwdikos_egkatastashs`) REFERENCES `EGKATASTASEIS`(`kwdikos_egkatastashs`),
   PRIMARY KEY (`kwdikos_proponhshs`)
 );
 
-CREATE TABLE if not exists `PROPONHSEIS_ATHLITI` (
-  `aem_athliti` int(6) NOT NULL CHECK(aem_athliti BETWEEN 100000 AND 999999),
-  `kwdikos_proponhshs` int(4) NOT NULL CHECK(kwdikos_proponhshs BETWEEN 1000 AND 9999),
-  PRIMARY KEY (`aem_athliti`, `kwdikos_proponhshs`),
-  FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`),
-  FOREIGN KEY (`kwdikos_proponhshs`) REFERENCES `PROPONHSH`(`kwdikos_proponhshs`)
-);
 
 CREATE TABLE if not exists `AGWNES_ATHLITI` (
   `aem_athliti` int(6) NOT NULL CHECK(aem_athliti BETWEEN 100000 AND 999999) , 
@@ -101,6 +90,7 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
 );
 
 
+ 
   CREATE TABLE IF NOT EXISTS `TRAUMATISMOS` (
   `aem_athliti` INT(6) NOT NULL,
   `hmeromhnia` DATE NOT NULL,
@@ -109,7 +99,6 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   `sovarotita` VARCHAR(20) NOT NULL,
   FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`) ON DELETE CASCADE
 );
-
 
 CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   `kwdikos_agwna` INT(4) NOT NULL CHECK(kwdikos_agwna BETWEEN 1000 AND 9999),
@@ -120,4 +109,3 @@ CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`) ON DELETE CASCADE,
   UNIQUE (`kwdikos_agwna`)
 );
-
