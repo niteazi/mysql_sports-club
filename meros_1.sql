@@ -88,24 +88,13 @@ CREATE TABLE IF NOT EXISTS `AGWNAS` (
 
 CREATE TABLE if not exists `PROPONHSH` (
   `kwdikos_proponhshs` int(4) NOT NULL CHECK(kwdikos_proponhshs BETWEEN 1000 AND 9999),
-  `athlima` VARCHAR(25) NOT NULL,
-  `kwdikos_egkatastashs` int(3) NOT NULL CHECK(kwdikos_egkatastashs BETWEEN 100 AND 999),
   `wra_dieksagwghs` TIME NOT NULL,
   `hmera_dieksagwghs` VARCHAR(10) NOT NULL,
   `diarkeia_se_lepta` int(3) NOT NULL,
-  FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`),
-  FOREIGN KEY (`kwdikos_egkatastashs`) REFERENCES `EGKATASTASEIS`(`kwdikos_egkatastashs`),
   PRIMARY KEY (`kwdikos_proponhshs`)
 );
 
---N:M pinakas athliti kai proponhseis
-CREATE TABLE if not exists `PROPONHSEIS_ATHLITI` (
-  `aem_athliti` int(6) NOT NULL CHECK(aem_athliti BETWEEN 100000 AND 999999),
-  `kwdikos_proponhshs` int(4) NOT NULL CHECK(kwdikos_proponhshs BETWEEN 1000 AND 9999),
-  PRIMARY KEY (`aem_athliti`, `kwdikos_proponhshs`),
-  FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`),
-  FOREIGN KEY (`kwdikos_proponhshs`) REFERENCES `PROPONHSH`(`kwdikos_proponhshs`)
-);
+
 
 --N:M pinakas athliti kai agwnas
 CREATE TABLE if not exists `AGWNES_ATHLITI` (
