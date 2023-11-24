@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `A8LITIS` (
   `kwdikos_proponhth` VARCHAR(7) NOT NULL CHECK(LENGTH(kwdikos_proponhth) = 7),
   `athlima` VARCHAR(25) NOT NULL,
   FOREIGN KEY (`kwdikos_proponhth`) REFERENCES `PROPONHTHS`(`kwdikos_proponhth`),
-  FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`),
+  --FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`),
   PRIMARY KEY (`aem_athliti`)
 );
 CREATE TABLE IF NOT EXISTS `AGWNAS` (
