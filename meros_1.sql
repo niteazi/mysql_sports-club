@@ -117,7 +117,7 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
  
   CREATE TABLE IF NOT EXISTS `TRAUMATISMOS` (
   `aem_athliti` INT(6) NOT NULL,
-  `hmeromhnia` DATE NOT NULL,
+  `hmeromhnia` DATETIME NOT NULL,
   `typos_traumatismou` VARCHAR(30) NOT NULL,
   `anafora_symvantos` TEXT,
   `sovarotita` VARCHAR(20) NOT NULL,
