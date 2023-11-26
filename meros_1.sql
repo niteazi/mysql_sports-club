@@ -130,7 +130,7 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   --FOREIGN KEY (`apotelesma`) REFERENCES `AGWNAS`(`apotelesma`),
 
 
---1:1 me agwna ..xreiazetai primary key..weak entity???
+--1:1 me agwna
 CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   `kwdikos_agwna` INT(4) NOT NULL CHECK(kwdikos_agwna BETWEEN 1000 AND 9999),
   `diarkeia_se_lepta` INT(3) NOT NULL,
