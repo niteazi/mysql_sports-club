@@ -45,7 +45,6 @@ CREATE TABLE IF NOT EXISTS `A8LITIS` (
   `kwdikos_proponhth` VARCHAR(7) NOT NULL CHECK(LENGTH(kwdikos_proponhth) = 7),
   `athlima` VARCHAR(25) NOT NULL,
   FOREIGN KEY (`kwdikos_proponhth`) REFERENCES `PROPONHTHS`(`kwdikos_proponhth`),
-  --FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`),
   PRIMARY KEY (`aem_athliti`)
 );
 CREATE TABLE IF NOT EXISTS `AGWNAS` (
@@ -72,7 +71,6 @@ CREATE TABLE if not exists `PROPONHSH` (
   PRIMARY KEY (`kwdikos_proponhshs`)
 );
 
-
 CREATE TABLE if not exists `AGWNES_ATHLITI` (
   `aem_athliti` int(6) NOT NULL CHECK(aem_athliti BETWEEN 100000 AND 999999) , 
   `kwdikos_agwna` int(4) NOT NULL CHECK(kwdikos_agwna BETWEEN 1000 AND 9999),
@@ -81,6 +79,7 @@ CREATE TABLE if not exists `AGWNES_ATHLITI` (
   FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`)
 );
 
+--N:M pinakas proponhsh kai proponhths
 CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   `proponhsh_kwdikos` int(4) NOT NULL CHECK(proponhsh_kwdikos BETWEEN 1000 AND 9999),
   `proponhtes_kwdikos` VARCHAR(7) NOT NULL CHECK(LENGTH(proponhtes_kwdikos) = 7),
@@ -89,17 +88,18 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   FOREIGN KEY (`proponhtes_kwdikos`) REFERENCES `PROPONHTHS`(`kwdikos_proponhth`)
 );
 
-
  
   CREATE TABLE IF NOT EXISTS `TRAUMATISMOS` (
   `aem_athliti` INT(6) NOT NULL,
   `hmeromhnia` DATETIME NOT NULL,
   `typos_traumatismou` VARCHAR(30) NOT NULL,
   `anafora_symvantos` TEXT,
-  `sovarotita` VARCHAR(20) NOT NULL,
+  `sovarotita` VARCHAR(20) NOT NULL CHECK(sovarotita IN ('elafria', 'metria','sovari')),
   FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`) ON DELETE CASCADE
 );
 
+
+--1:1 me agwna
 CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   `kwdikos_agwna` INT(4) NOT NULL CHECK(kwdikos_agwna BETWEEN 1000 AND 9999),
   `diarkeia_se_lepta` INT(3) NOT NULL,
@@ -109,3 +109,4 @@ CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`) ON DELETE CASCADE,
   UNIQUE (`kwdikos_agwna`)
 );
+
