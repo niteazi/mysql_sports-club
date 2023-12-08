@@ -66,7 +66,6 @@ CREATE TABLE IF NOT EXISTS `A8LITIS` (
   `kwdikos_proponhth` VARCHAR(7) NOT NULL CHECK(LENGTH(kwdikos_proponhth) = 7),
   `athlima` VARCHAR(25) NOT NULL,
   FOREIGN KEY (`kwdikos_proponhth`) REFERENCES `PROPONHTHS`(`kwdikos_proponhth`),
-  --FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`),
   PRIMARY KEY (`aem_athliti`)
 );
 CREATE TABLE IF NOT EXISTS `AGWNAS` (
@@ -120,14 +119,9 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   `hmeromhnia` DATETIME NOT NULL,
   `typos_traumatismou` VARCHAR(30) NOT NULL,
   `anafora_symvantos` TEXT,
-  `sovarotita` VARCHAR(20) NOT NULL,
+  `sovarotita` VARCHAR(20) NOT NULL CHECK(sovarotita IN ('elafria', 'metria','sovari')),
   FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`) ON DELETE CASCADE
 );
-
---g n mporei n mpei sta statistika to apotelesma tou agwna
---CREATE INDEX idx_agwnas_apotelesma ON AGWNAS(apotelesma);
-  --`apotelesma` VARCHAR(255) NOT NULL,
-  --FOREIGN KEY (`apotelesma`) REFERENCES `AGWNAS`(`apotelesma`),
 
 
 --1:1 me agwna
