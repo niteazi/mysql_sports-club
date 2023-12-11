@@ -181,9 +181,9 @@ VALUES
 
 INSERT INTO PROPONHSH
 VALUES 
-(1111, 'Podosfairo', 123, '13:00:00', 'Trith', 90),
-(2222, 'Basket', 128, '11:00:00', 'Deutera', 120),
-(3333, 'Tennis', 173, '10:00:00', 'Savvato', 60);
+(1111, '13:00:00', 'Trith', 90),
+(2222, '11:00:00', 'Deutera', 120),
+(3333, '10:00:00', 'Savvato', 60);
 
 INSERT INTO PROPONHSEIS_ATHLITI
 VALUES 
