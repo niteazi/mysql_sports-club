@@ -165,11 +165,11 @@ VALUES
 
 INSERT INTO SEASON
 VALUES 
-('Fthinoporo',2023, 20, 10,10),
-('Anoiksi',2022, 20, 15,5),
-('Ftinoporo',2022, 15, 10,5),
-('Anoiksi',2021, 10, 5,5)
-('Fthinoporo',2021, 11, 5,6);
+('Xeimerino',2023, 20, 10,10),
+('Earino',2022, 20, 15,5),
+('Xeimerino',2022, 15, 10,5),
+('Earino',2021, 10, 5,5),
+('Xeimerino',2021, 11, 5,6);
 
 
 INSERT INTO PROPONHTHS
@@ -193,9 +193,19 @@ VALUES
 
 INSERT INTO AGWNAS
 VALUES 
-(1234, 'Podosfairo','Anoiksi', 2022, '2022-05-01', '15:00:00', 'nikh', 'filiko', 'edra'),
-(2434,'Basket','Anoiksi', 2022, '2021-12-12', '17:00:00', 'htta', 'filiko', 'edra'),
-(3344, 'Tennis','Anoiksi', 2022, '2022-03-23', '12:00:00', 'nikh', 'agwnistiko', 'ektos edras'),;
+(1234, 'Podosfairo','Earino', 2022, '2022-05-01', '15:00:00', 'nikh', 'filiko', 'edra'),
+(2434,'Basket','Xeimerino', 2022, '2022-10-12', '17:00:00', 'htta', 'filiko', 'edra'),
+(3344, 'Tennis','Earino', 2022, '2022-03-23', '12:00:00', 'nikh', 'agwnistiko', 'ektos edras'),
+(3476, 'Volley','Xeimerino', 2021, '2021-11-01', '18:00:00', 'nikh', 'filiko', 'edra'),
+(3477, 'Kolymvish','Xeimerino', 2022, '2022-10-01', '11:30:00', 'nikh', 'filiko', 'edra'),
+(3478, 'Podosfairo','Earino', 2021, '2021-05-14', '16:00:00', 'htta', 'agwnistiko', 'ektos edras'),
+(3479, 'Basket','Earino', 2022, '2022-05-02', '17:00:00', 'nikh', 'filiko', 'edra'),
+(3480, 'Tennis','Earino', 2022, '2022-04-03', '18:00:00', 'htta', 'agwnistiko', 'edra'),
+(3481, 'Volley','Xeimerino', 2021, '2021-02-04', '19:00:00', 'nikh', 'filiko', 'edra'),
+(3482, 'Kolymvish','Xeimerino', 2023, '2023-11-24', '20:00:00', 'htta', 'agwnistiko', 'ektos edras'),
+(3483, 'Podosfairo','Earino', 2021, '2023-06-06', '14:00:00', 'nikh', 'filiko', 'edra'),
+(3484, 'Basket','Earino', 2021, '2023-07-07', '16:30:00', 'htta', 'agwnistiko', 'ektos edras'),
+(3485, 'Tennis','Xeimerino', 2023, '2023-12-08', '10:00:00', 'nikh', 'filiko', 'edra');
 
 INSERT INTO PROPONHSH
 VALUES 
