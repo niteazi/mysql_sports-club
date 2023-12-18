@@ -258,9 +258,9 @@ VALUES
 
 INSERT INTO TRAUMATISMOS
 VALUES 
-(123456, '2023-10-10 08:30:00', 'katagma sto xeri', 'epese kai xtypise', 'sovari'),
+(123458, '2023-10-10 08:30:00', 'katagma sto xeri', 'epese kai xtypise', 'sovari'),
 (123456, '2022-08-05 14:45:00', 'strampouligma astragalou', 'ton esproksan', 'metria'),
-(123456, '2022-11-13 18:20:00', 'travigma wmou', 'apotomh kinhsh', 'sovari');
+(195843, '2022-11-13 18:20:00', 'travigma wmou', 'apotomh kinhsh', 'sovari');
 
 
 INSERT INTO STATISTIKA
