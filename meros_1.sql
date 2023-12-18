@@ -152,10 +152,15 @@ VALUES
 
 INSERT INTO EGKATASTASEIS
 VALUES 
-(123,'ghpedo podosfairou','Podosfairo', 'kleisto', 200),
+(123,'ghpedo podosfairou 5x5','Podosfairo', 'kleisto', 200),
+(124,'ghpedo podosfairou 3x3','Podosfairo', 'kleisto', 180),
+(125,'ghpedo podosfairou 5x5','Podosfairo', 'anoixto', 220),
 (128,'ghpedo basket','Basket', 'kleisto', 200),
-(173,'ghpedo tennis', 'Tennis','anoixto', 100);
-
+(127,'ghpedo basket','Basket', 'anoixto', 210),
+(173,'ghpedo tennis', 'Tennis','anoixto', 110),
+(174,'ghpedo volley', 'Volley','anoixto', 120),
+(176,'pisina kolymvishs', 'Kolymvish','kleisto', 80),
+(175,'pisina kolymvishs', 'Kolymvish','anoixto', 100);
 
 INSERT INTO SEASON
 VALUES 
