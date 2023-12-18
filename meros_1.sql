@@ -98,7 +98,7 @@ CREATE TABLE if not exists `PROPONHSH` (
 
 
 --N:M pinakas athliti kai agwnas
-CREATE TABLE if not exists `AGWNES_ATHLITI` (
+CREATE TABLE if not exists `AGWNES_A8LITI` (
   `aem_athliti` int(6) NOT NULL CHECK(aem_athliti BETWEEN 100000 AND 999999) , 
   `kwdikos_agwna` int(4) NOT NULL CHECK(kwdikos_agwna BETWEEN 1000 AND 9999),
   PRIMARY KEY (`aem_athliti`, `kwdikos_agwna`),
