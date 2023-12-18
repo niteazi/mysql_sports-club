@@ -45,6 +45,7 @@ CREATE TABLE IF NOT EXISTS `SEASON` (
   `synolo_agwnwn` int(4) NOT NULL,
   `synolo_nikwn` int(3) NOT NULL,
   `synolo_httwn` int(3) NOT NULL,
+  CHECK (`synolo_agwnwn` = `synolo_nikwn` + `synolo_httwn`),
   PRIMARY KEY (epoxh, etos)
 );
 
@@ -164,9 +165,11 @@ VALUES
 
 INSERT INTO SEASON
 VALUES 
+('Fthinoporo',2023, 20, 10,10),
 ('Anoiksi',2022, 20, 15,5),
 ('Ftinoporo',2022, 15, 10,5),
-('Anoiksi',2021, 10, 5,5);
+('Anoiksi',2021, 10, 5,5)
+('Fthinoporo',2021, 11, 5,6);
 
 
 INSERT INTO PROPONHTHS
