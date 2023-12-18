@@ -182,28 +182,39 @@ VALUES
 
 INSERT INTO A8LITIS
 VALUES 
-(123456, 'Dimitrios Skourths', 'Andras', '2023-09-01', '2000-01-01', 1234567, 'Podosfairo'),
+(123456, 'Dimitrios Skourths', 'Andras', '2022-09-01', '2000-01-01', 1234567, 'Podosfairo'),
+(133456, 'Trifwnas Anastasiadhs', 'Andras', '2022-09-14', '2000-07-07', 1234567, 'Podosfairo'),
 (123457, 'Orfeas Dedes', 'Andras', '2021-09-05', '2001-05-12', 1234568, 'Basket'),
 (123458, 'Iosif Tsannis', 'Andras', '2021-10-10', '2000-03-15', 1234569, 'Tennis'),
 (123459, 'Maria Papadopoulou', 'Gynaika', '2021-09-13', '2003-01-20', 1234567, 'Podosfairo'),
 (123460, 'Eleni Papadopoulou', 'Gynaika', '2021-09-13', '2003-01-20', 1234568, 'Basket'),
 (123461, 'Euaggelia Kritsotaki', 'Gynaika', '2022-11-16', '2005-04-16', 1234569, 'Tennis'),
-(153456, 'Athina Matziouni', 'Gynaika', '2022-10-01','2001-10-06',1235469,'Volley'),
-(195842, 'Frideriki Papadofasomanolaki','Gynaika','2023-10-03','2008-11-13',2359487,'Kolymvish');
+(153456, 'Athina Matziouni', 'Gynaika', '2021-10-01','2001-10-06',1235469,'Volley'),
+(195842, 'Frideriki Papadofasomanolaki','Gynaika','2021-10-03','2008-11-13',2359487,'Kolymvish'),
+(123462, 'Giannis Athanasopoulos', 'Andras', '2022-10-20', '2002-02-25', 1234567, 'Podosfairo'),
+(123463, 'Maria Koutoukou', 'Gynaika', '2022-09-05', '2003-03-10', 1234567, 'Podosfairo'),
+(123464, 'Nikos Papadopoulos', 'Andras', '2022-09-10', '2001-08-15', 1234568, 'Basket'),
+(123465, 'Eirini Georgiou', 'Gynaika', '2022-08-25', '2002-05-20', 1234568, 'Basket'),
+(123466, 'Alexandros Karagiannis', 'Andras', '2022-07-15', '2000-11-30', 1234569, 'Tennis'),
+(123467, 'Sophia Antoniou', 'Gynaika', '2022-10-30', '2001-04-05', 1234569, 'Tennis'),
+(153457, 'Dimitra Karavasili', 'Gynaika', '2021-09-05', '2002-09-15', 1235469, 'Volley'),
+(153458, 'Panagiotis Koutsopoulos', 'Andras', '2022-12-05', '2000-10-10', 1235469, 'Volley'),
+(195843, 'Konstantinos Papadopoulos', 'Andras', '2023-01-10', '2009-02-18', 2359487, 'Kolymvish'),
+(195844, 'Eleni Mitsou', 'Gynaika', '2023-02-15', '2007-07-23', 2359487, 'Kolymvish');
 
 INSERT INTO AGWNAS
 VALUES 
-(1234, 'Podosfairo','Earino', 2022, '2022-05-01', '15:00:00', 'nikh', 'filiko', 'edra'),
+(1234, 'Podosfairo','Xeimerino', 2023, '2023-05-01', '15:00:00', 'nikh', 'filiko', 'edra'),
 (2434,'Basket','Xeimerino', 2022, '2022-10-12', '17:00:00', 'htta', 'filiko', 'edra'),
 (3344, 'Tennis','Earino', 2022, '2022-03-23', '12:00:00', 'nikh', 'agwnistiko', 'ektos edras'),
 (3476, 'Volley','Xeimerino', 2021, '2021-11-01', '18:00:00', 'nikh', 'filiko', 'edra'),
 (3477, 'Kolymvish','Xeimerino', 2022, '2022-10-01', '11:30:00', 'nikh', 'filiko', 'edra'),
-(3478, 'Podosfairo','Earino', 2021, '2021-05-14', '16:00:00', 'htta', 'agwnistiko', 'ektos edras'),
+(3478, 'Podosfairo','Earino', 2022, '2022-05-14', '16:00:00', 'htta', 'agwnistiko', 'ektos edras'),
 (3479, 'Basket','Earino', 2022, '2022-05-02', '17:00:00', 'nikh', 'filiko', 'edra'),
 (3480, 'Tennis','Earino', 2022, '2022-04-03', '18:00:00', 'htta', 'agwnistiko', 'edra'),
 (3481, 'Volley','Xeimerino', 2021, '2021-02-04', '19:00:00', 'nikh', 'filiko', 'edra'),
 (3482, 'Kolymvish','Xeimerino', 2023, '2023-11-24', '20:00:00', 'htta', 'agwnistiko', 'ektos edras'),
-(3483, 'Podosfairo','Earino', 2021, '2023-06-06', '14:00:00', 'nikh', 'filiko', 'edra'),
+(3483, 'Podosfairo','Earino', 2023, '2023-06-06', '14:00:00', 'nikh', 'filiko', 'edra'),
 (3484, 'Basket','Earino', 2021, '2023-07-07', '16:30:00', 'htta', 'agwnistiko', 'ektos edras'),
 (3485, 'Tennis','Xeimerino', 2023, '2023-12-08', '10:00:00', 'nikh', 'filiko', 'edra');
 
@@ -221,11 +232,19 @@ VALUES
 (9009, '17:00:00', 'Triti', 60);
 
 
-INSERT INTO AGWNES_ATHLITI
+INSERT INTO AGWNES_A8LITI 
 VALUES 
-(123456, 1234),
-(123457, 2434),
-(123458, 3344);
+(1234,123456),
+(1234,133456),
+(1234,123462),
+(2434,123457),
+(3344,123458),
+(3476,153457),
+(3476,153456),
+(3477,195842),
+(3483,123459),
+(3483,123463),
+(3478,123459);
 
 INSERT INTO PROPONHSH_PROPONHTHS
 VALUES 
