@@ -29,3 +29,12 @@ END //
 DELIMITER ;  -- Reverting back to ;
 
 CALL ViewAll();
+
+
+--erwthma 5
+
+--Count the number of matches for each athlete
+SELECT A8LITIS.aem_athliti, A8LITIS.onomateponymo, A8LITIS.athlima, COUNT(AGWNES_A8LITI.kwdikos_agwna) AS NumberOfMatches
+FROM A8LITIS
+JOIN AGWNES_A8LITI ON A8LITIS.aem_athliti = AGWNES_A8LITI.aem_athliti
+GROUP BY A8LITIS.aem_athliti, A8LITIS.onomateponymo, A8LITIS.athlima;

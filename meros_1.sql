@@ -273,4 +273,3 @@ VALUES
 (3344, 60, 42, 'psixala', 'Giannis Papadopoulos'),
 (3479,120,103,NULL,'Phgasos Viotias');
 
-
