@@ -38,3 +38,29 @@ SELECT A8LITIS.aem_athliti, A8LITIS.onomateponymo, A8LITIS.athlima, COUNT(AGWNES
 FROM A8LITIS
 JOIN AGWNES_A8LITI ON A8LITIS.aem_athliti = AGWNES_A8LITI.aem_athliti
 GROUP BY A8LITIS.aem_athliti, A8LITIS.onomateponymo, A8LITIS.athlima;
+
+
+--erwthma 7
+
+
+-- Δημιουργία Όψης (View) με τα στοιχεία των Αθλητών και των Αγώνων που έχουν συμμετάσχει
+CREATE VIEW v_A8LITIS_AGWNAS AS
+SELECT
+    A8LITIS.aem_athliti,
+    A8LITIS.onomateponymo AS onoma_athliti,
+    A8LITIS.fylo,
+    AGWNAS.kwdikos_agwna,
+    AGWNAS.athlima AS onoma_athlimatos,
+    AGWNAS.epoxh_season,
+    AGWNAS.etos,
+    AGWNAS.hmeromhnia_dieksagwghs,
+    AGWNAS.wra_dieksagwghs
+FROM
+    A8LITIS
+JOIN AGWNAS ON A8LITIS.athlima = AGWNAS.athlima;
+
+-- Διαγραφή της Όψης
+DROP VIEW IF EXISTS v_A8LITIS_AGWNAS;
+
+-- Ερώτημα για την εμφάνιση όλων των δεδομένων της Όψης
+SELECT * FROM v_A8LITIS_AGWNAS;
