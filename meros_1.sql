@@ -176,8 +176,8 @@ INSERT INTO PROPONHTHS
 VALUES
 (1234567, 'Podosfairo', 'Georgios Gkolios', 2, 1000),
 (1234568, 'Basket', 'Ioannis Kapis', 3, 1100),
-(1234569, 'Tennis', 'Xrhstos Dimitriadhs', 1, 900);
-(1235469, 'Volley', 'Emanouil Emanouilidis', 2, 800);
+(1234569, 'Tennis', 'Xrhstos Dimitriadhs', 1, 900),
+(1235469, 'Volley', 'Emanouil Emanouilidis', 2, 800),
 (2359487, 'Kolymvish', 'Isidoros Panagiotou', 5, 1200); 
 
 INSERT INTO A8LITIS
@@ -187,13 +187,15 @@ VALUES
 (123458, 'Iosif Tsannis', 'Andras', '2021-10-10', '2000-03-15', 1234569, 'Tennis'),
 (123459, 'Maria Papadopoulou', 'Gynaika', '2021-09-13', '2003-01-20', 1234567, 'Podosfairo'),
 (123460, 'Eleni Papadopoulou', 'Gynaika', '2021-09-13', '2003-01-20', 1234568, 'Basket'),
-(123461, 'Euaggelia Kritsotaki', 'Gynaika', '2022-11-16', '2005-04-16', 1234569, 'Tennis');
+(123461, 'Euaggelia Kritsotaki', 'Gynaika', '2022-11-16', '2005-04-16', 1234569, 'Tennis'),
+(153456, 'Athina Matziouni', 'Gynaika', '2022-10-01','2001-10-06',1235469,'Volley'),
+(195842, 'Frideriki Papadofasomanolaki','Gynaika','2023-10-03','2008-11-13',2359487,'Kolymvish');
 
 INSERT INTO AGWNAS
 VALUES 
 (1234, 'Podosfairo','Anoiksi', 2022, '2022-05-01', '15:00:00', 'nikh', 'filiko', 'edra'),
 (2434,'Basket','Anoiksi', 2022, '2021-12-12', '17:00:00', 'htta', 'filiko', 'edra'),
-(3344, 'Tennis','Anoiksi', 2022, '2022-03-23', '12:00:00', 'nikh', 'agwnistiko', 'ektos edras');
+(3344, 'Tennis','Anoiksi', 2022, '2022-03-23', '12:00:00', 'nikh', 'agwnistiko', 'ektos edras'),;
 
 INSERT INTO PROPONHSH
 VALUES 
