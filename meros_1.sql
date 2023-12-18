@@ -212,5 +212,3 @@ VALUES
 (3344, 60, 42, 'psixala', 'Giannis Papadopoulos');
 
 
-
---den exoun mpei values gia pinakes N:M 
