@@ -99,8 +99,8 @@ CREATE TABLE if not exists `PROPONHSH` (
 
 --N:M pinakas athliti kai agwnas
 CREATE TABLE if not exists `AGWNES_A8LITI` (
-  `aem_athliti` int(6) NOT NULL CHECK(aem_athliti BETWEEN 100000 AND 999999) , 
   `kwdikos_agwna` int(4) NOT NULL CHECK(kwdikos_agwna BETWEEN 1000 AND 9999),
+  `aem_athliti` int(6) NOT NULL CHECK(aem_athliti BETWEEN 100000 AND 999999) , 
   PRIMARY KEY (`aem_athliti`, `kwdikos_agwna`),
   FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`),
   FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`)
