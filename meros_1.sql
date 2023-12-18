@@ -260,13 +260,18 @@ INSERT INTO TRAUMATISMOS
 VALUES 
 (123458, '2023-10-10 08:30:00', 'katagma sto xeri', 'epese kai xtypise', 'sovari'),
 (123456, '2022-08-05 14:45:00', 'strampouligma astragalou', 'ton esproksan', 'metria'),
-(195843, '2022-11-13 18:20:00', 'travigma wmou', 'apotomh kinhsh', 'sovari');
+(195843, '2022-11-13 18:20:00', 'travigma wmou', 'apotomh kinhsh', 'sovari'),
+(195843, '2023-12-13 14:20:00', 'travigma wmou', 'apotomh kinhsh', 'metria'),
+(153457, '2023-12-13 14:20:00', 'traumatismos daktylou', 'xtypise thn mpala lathos', 'elafria');
+
 
 
 INSERT INTO STATISTIKA
 VALUES 
 (1234,  90, 50, 'hlios','Asteras Korinthou'),
 (2434,  120, 100,NULL,'Aikitoi Xanthis' ),
-(3344, 60, 42, 'psixala', 'Giannis Papadopoulos');
+(3485,9086,'synefia','Marios Karathanasis'),
+(3344, 60, 42, 'psixala', 'Giannis Papadopoulos'),
+(3479,120,103,NULL,'Phgasos Viotias');
 
 
