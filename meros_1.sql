@@ -185,11 +185,6 @@ VALUES
 (2222, '11:00:00', 'Deutera', 120),
 (3333, '10:00:00', 'Savvato', 60);
 
-INSERT INTO PROPONHSEIS_ATHLITI
-VALUES 
-(123456, 1111),
-(123457, 2222),
-(123458, 3333);
 
 INSERT INTO AGWNES_ATHLITI
 VALUES 
@@ -215,5 +210,7 @@ VALUES
 (1234,  90, 50, 'hlios','Asteras Korinthou'),
 (2434,  120, 100,NULL,'Aikitoi Xanthis' ),
 (3344, 60, 42, 'psixala', 'Giannis Papadopoulos');
+
+
 
 --den exoun mpei values gia pinakes N:M 
