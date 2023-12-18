@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS `SEASON` (
   `synolo_agwnwn` int(4) NOT NULL,
   `synolo_nikwn` int(3) NOT NULL,
   `synolo_httwn` int(3) NOT NULL,
+  CHECK (`synolo_agwnwn` = `synolo_nikwn` + `synolo_httwn`),
   PRIMARY KEY (epoxh, etos)
 );
 
@@ -71,15 +72,16 @@ CREATE TABLE if not exists `PROPONHSH` (
   PRIMARY KEY (`kwdikos_proponhshs`)
 );
 
-CREATE TABLE if not exists `AGWNES_ATHLITI` (
-  `aem_athliti` int(6) NOT NULL CHECK(aem_athliti BETWEEN 100000 AND 999999) , 
+
+CREATE TABLE if not exists `AGWNES_A8LITI` (
   `kwdikos_agwna` int(4) NOT NULL CHECK(kwdikos_agwna BETWEEN 1000 AND 9999),
+  `aem_athliti` int(6) NOT NULL CHECK(aem_athliti BETWEEN 100000 AND 999999) , 
   PRIMARY KEY (`aem_athliti`, `kwdikos_agwna`),
   FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`),
   FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`)
 );
 
---N:M pinakas proponhsh kai proponhths
+
 CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   `proponhsh_kwdikos` int(4) NOT NULL CHECK(proponhsh_kwdikos BETWEEN 1000 AND 9999),
   `proponhtes_kwdikos` VARCHAR(7) NOT NULL CHECK(LENGTH(proponhtes_kwdikos) = 7),
@@ -88,7 +90,7 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   FOREIGN KEY (`proponhtes_kwdikos`) REFERENCES `PROPONHTHS`(`kwdikos_proponhth`)
 );
 
- 
+
   CREATE TABLE IF NOT EXISTS `TRAUMATISMOS` (
   `aem_athliti` INT(6) NOT NULL,
   `hmeromhnia` DATETIME NOT NULL,
@@ -99,7 +101,6 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
 );
 
 
---1:1 me agwna
 CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   `kwdikos_agwna` INT(4) NOT NULL CHECK(kwdikos_agwna BETWEEN 1000 AND 9999),
   `diarkeia_se_lepta` INT(3) NOT NULL,
@@ -109,4 +110,3 @@ CREATE TABLE IF NOT EXISTS `STATISTIKA` (
   FOREIGN KEY (`kwdikos_agwna`) REFERENCES `AGWNAS`(`kwdikos_agwna`) ON DELETE CASCADE,
   UNIQUE (`kwdikos_agwna`)
 );
-
