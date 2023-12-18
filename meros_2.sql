@@ -43,24 +43,30 @@ GROUP BY A8LITIS.aem_athliti, A8LITIS.onomateponymo, A8LITIS.athlima;
 --erwthma 7
 
 
--- Δημιουργία Όψης (View) με τα στοιχεία των Αθλητών και των Αγώνων που έχουν συμμετάσχει
-CREATE VIEW v_A8LITIS_AGWNAS AS
+-- Δημιουργία Όψης (View) με τα στοιχεία των Αθλητών, προπονήσεων και τα στοιχεία των Προπονητών
+CREATE VIEW v_PROPONHSH_PROPONHTHS_A8LITIS AS
 SELECT
-    A8LITIS.aem_athliti,
-    A8LITIS.onomateponymo AS onoma_athliti,
-    A8LITIS.fylo,
-    AGWNAS.kwdikos_agwna,
-    AGWNAS.athlima AS onoma_athlimatos,
-    AGWNAS.epoxh_season,
-    AGWNAS.etos,
-    AGWNAS.hmeromhnia_dieksagwghs,
-    AGWNAS.wra_dieksagwghs
+    A.aem_athliti,
+    A.onomateponymo AS onoma_athliti,
+    PR.kwdikos_proponhshs,
+    PT.athlima AS athlima,
+    PR.hmera_dieksagwghs,
+    PR.wra_dieksagwghs,
+    PR.diarkeia_se_lepta,
+    PT.kwdikos_proponhth,
+    PT.onomateponymo AS onomateponymo_proponhth
 FROM
-    A8LITIS
-JOIN AGWNAS ON A8LITIS.athlima = AGWNAS.athlima;
+    PROPONHSH PR
+JOIN PROPONHSH_PROPONHTHS PP ON PR.kwdikos_proponhshs = PP.proponhsh_kwdikos
+JOIN PROPONHTHS PT ON PP.proponhtes_kwdikos = PT.kwdikos_proponhth
+JOIN A8LITIS A ON PT.kwdikos_proponhth = A.kwdikos_proponhth
+ORDER BY A.aem_athliti;
+
+
+
 
 -- Διαγραφή της Όψης
-DROP VIEW IF EXISTS v_A8LITIS_AGWNAS;
+DROP VIEW IF EXISTS v_PROPONHSH_PROPONHTHS_A8LITIS;
 
 -- Ερώτημα για την εμφάνιση όλων των δεδομένων της Όψης
-SELECT * FROM v_A8LITIS_AGWNAS;
+SELECT * FROM v_PROPONHSH_PROPONHTHS_A8LITIS;
