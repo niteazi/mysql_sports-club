@@ -2,7 +2,7 @@
 DROP DATABASE IF EXISTS sports_club;
 CREATE DATABASE IF NOT EXISTS sports_club;
 
-USE DATABASE IF EXISTS sports_club;
+USE sports_club;
 
 --drop TABLES
 DROP TABLE IF EXISTS `STATISTIKA`;
@@ -147,8 +147,8 @@ VALUES
 ('Podosfairo', 'omadiko', 'mpala'),
 ('Basket', 'omadiko', 'mpala'),
 ('Tennis', 'atomiko', 'raketes'),
-('Volley', 'omadiko', 'mpala')
-('Kolymvish', 'atomiko');
+('Volley', 'omadiko', 'mpala'),
+('Kolymvish', 'atomiko',NULL);
 
 
 INSERT INTO EGKATASTASEIS
@@ -214,7 +214,7 @@ VALUES
 (3480, 'Tennis','Earino', 2022, '2022-04-03', '18:00:00', 'htta', 'agwnistiko', 'edra'),
 (3481, 'Volley','Xeimerino', 2021, '2021-02-04', '19:00:00', 'nikh', 'filiko', 'edra'),
 (3482, 'Kolymvish','Xeimerino', 2023, '2023-11-24', '20:00:00', 'htta', 'agwnistiko', 'ektos edras'),
-(3483, 'Podosfairo','Earino', 2023, '2023-06-06', '14:00:00', 'nikh', 'filiko', 'edra'),
+(3483, 'Podosfairo','Earino', 2022, '2022-06-06', '14:00:00', 'nikh', 'filiko', 'edra'),
 (3484, 'Basket','Earino', 2021, '2023-07-07', '16:30:00', 'htta', 'agwnistiko', 'ektos edras'),
 (3485, 'Tennis','Xeimerino', 2023, '2023-12-08', '10:00:00', 'nikh', 'filiko', 'edra');
 
@@ -253,7 +253,7 @@ VALUES
 (4059,2359487), 
 (5005,1235469),
 (6006,1234569),
-(7007,1234567)
+(7007,1234567),
 (8008,2359487);
 
 INSERT INTO TRAUMATISMOS
@@ -263,7 +263,6 @@ VALUES
 (195843, '2022-11-13 18:20:00', 'travigma wmou', 'apotomh kinhsh', 'sovari'),
 (195843, '2023-12-13 14:20:00', 'travigma wmou', 'apotomh kinhsh', 'metria'),
 (153457, '2023-12-13 14:20:00', 'traumatismos daktylou', 'xtypise thn mpala lathos', 'elafria');
-
 
 
 INSERT INTO STATISTIKA
