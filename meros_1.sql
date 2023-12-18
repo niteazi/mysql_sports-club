@@ -269,7 +269,7 @@ INSERT INTO STATISTIKA
 VALUES 
 (1234,  90, 50, 'hlios','Asteras Korinthou'),
 (2434,  120, 100,NULL,'Aikitoi Xanthis' ),
-(3485,9086,'synefia','Marios Karathanasis'),
+(3485,90,86,'synefia','Marios Karathanasis'),
 (3344, 60, 42, 'psixala', 'Giannis Papadopoulos'),
 (3479,120,103,NULL,'Phgasos Viotias');
 
