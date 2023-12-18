@@ -145,7 +145,10 @@ INSERT INTO A8LIMA
 VALUES 
 ('Podosfairo', 'omadiko', 'mpala'),
 ('Basket', 'omadiko', 'mpala'),
-('Tennis', 'atomiko', 'raketes');
+('Tennis', 'atomiko', 'raketes'),
+('Volley', 'omadiko', 'mpala')
+('Kolymvish', 'atomiko');
+
 
 INSERT INTO EGKATASTASEIS
 VALUES 
@@ -163,13 +166,15 @@ VALUES
 
 INSERT INTO PROPONHTHS
 VALUES
-(1234567, 'Podosfairo', 'Giorgos Gkolios', 2, 1000),
-(1234568, 'Basket', 'Giannis Kapis', 3, 1100),
+(1234567, 'Podosfairo', 'Georgios Gkolios', 2, 1000),
+(1234568, 'Basket', 'Ioannis Kapis', 3, 1100),
 (1234569, 'Tennis', 'Xrhstos Dimitriadhs', 1, 900);
+(1235469, 'Volley', 'Emanouil Emanouilidis', 2, 800);
+(2359487, 'Kolymvish', 'Isidoros Panagiotou', 5, 1200); 
 
 INSERT INTO A8LITIS
 VALUES 
-(123456, 'Dimitris Skourths', 'Andras', '2020-09-01', '2000-01-01', 1234567, 'Podosfairo'),
+(123456, 'Dimitrios Skourths', 'Andras', '2020-09-01', '2000-01-01', 1234567, 'Podosfairo'),
 (123457, 'Orfeas Dedes', 'Andras', '2021-09-05', '2001-05-12', 1234568, 'Basket'),
 (123458, 'Iosif Tsannis', 'Andras', '2019-10-10', '2000-03-15', 1234569, 'Tennis');
 
