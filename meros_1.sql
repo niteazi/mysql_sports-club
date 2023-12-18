@@ -182,9 +182,12 @@ VALUES
 
 INSERT INTO A8LITIS
 VALUES 
-(123456, 'Dimitrios Skourths', 'Andras', '2020-09-01', '2000-01-01', 1234567, 'Podosfairo'),
+(123456, 'Dimitrios Skourths', 'Andras', '2023-09-01', '2000-01-01', 1234567, 'Podosfairo'),
 (123457, 'Orfeas Dedes', 'Andras', '2021-09-05', '2001-05-12', 1234568, 'Basket'),
-(123458, 'Iosif Tsannis', 'Andras', '2019-10-10', '2000-03-15', 1234569, 'Tennis');
+(123458, 'Iosif Tsannis', 'Andras', '2021-10-10', '2000-03-15', 1234569, 'Tennis'),
+(123459, 'Maria Papadopoulou', 'Gynaika', '2021-09-13', '2003-01-20', 1234567, 'Podosfairo'),
+(123460, 'Eleni Papadopoulou', 'Gynaika', '2021-09-13', '2003-01-20', 1234568, 'Basket'),
+(123461, 'Euaggelia Kritsotaki', 'Gynaika', '2022-11-16', '2005-04-16', 1234569, 'Tennis');
 
 INSERT INTO AGWNAS
 VALUES 
