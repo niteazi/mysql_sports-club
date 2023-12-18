@@ -63,8 +63,6 @@ JOIN A8LITIS A ON PT.kwdikos_proponhth = A.kwdikos_proponhth
 ORDER BY A.aem_athliti;
 
 
-
-
 -- Διαγραφή της Όψης
 DROP VIEW IF EXISTS v_PROPONHSH_PROPONHTHS_A8LITIS;
 
