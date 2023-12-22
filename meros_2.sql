@@ -40,6 +40,21 @@ JOIN AGWNES_A8LITI ON A8LITIS.aem_athliti = AGWNES_A8LITI.aem_athliti
 GROUP BY A8LITIS.aem_athliti, A8LITIS.onomateponymo, A8LITIS.athlima;
 
 
+--megalytero arithmo theatwn SE AGWNA g kathe athlima
+SELECT AGWNAS.athlima, MAX(STATISTIKA.arithmos_theatwn) AS MaxTheatwn
+FROM STATISTIKA
+JOIN AGWNAS ON STATISTIKA.kwdikos_agwna = AGWNAS.kwdikos_agwna
+GROUP BY AGWNAS.athlima;
+--TO IDIO ALLA EMFANIZEI K TON KWDIKO AGNWA
+SELECT AGWNAS.athlima, STATISTIKA.kwdikos_agwna, STATISTIKA.arithmos_theatwn AS MaxTheatwn
+FROM STATISTIKA
+JOIN AGWNAS ON STATISTIKA.kwdikos_agwna = AGWNAS.kwdikos_agwna
+WHERE (AGWNAS.athlima, STATISTIKA.arithmos_theatwn) IN (
+  SELECT athlima, MAX(arithmos_theatwn)
+  FROM STATISTIKA
+  JOIN AGWNAS ON STATISTIKA.kwdikos_agwna = AGWNAS.kwdikos_agwna
+  GROUP BY athlima
+);
 --erwthma 7
 
 
