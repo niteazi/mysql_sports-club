@@ -55,6 +55,9 @@ WHERE (AGWNAS.athlima, STATISTIKA.arithmos_theatwn) IN (
   JOIN AGWNAS ON STATISTIKA.kwdikos_agwna = AGWNAS.kwdikos_agwna
   GROUP BY athlima
 );
+
+
+
 --erwthma 7
 
 
