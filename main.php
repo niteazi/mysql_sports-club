@@ -9,7 +9,7 @@
 <?php
 $h = 'localhost'; // Όνομα server
 $u = 'Nik'; // Όνομα χρήστη
-$p = 'a1b2c3GR'; // Password
+$p = '566'; // Password
 $n = 'sports_club'; // Όνομα Βάσης
 $conne = mysqli_connect($h, $u, $p, $n)
 or die("Connection failed");
