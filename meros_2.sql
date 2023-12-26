@@ -95,8 +95,6 @@ SELECT * FROM SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
 
 --erwthma 8
 
---erwthma 9 
-
 DELIMITER //
 CREATE PROCEDURE ViewAll()  -- TO PROCEDURE ΣΩΖΕΙ ΧΡΟΝΟ, ΑΝΤΙ ΝΑ ΤΑ ΓΡΑΦΩ ΟΛΑ ΞΑΝΑ ΑΠΛΟΣ ΤΟ ΚΑΛΩ 
 BEGIN
@@ -114,4 +112,37 @@ DELIMITER ;  -- Reverting back to ;
 
 CALL ViewAll();
 
+
+--erwthma 9 
+
+CREATE TABLE TRIGGER_TABLE (  
+    MESSAGE VARCHAR(100)
+); -- Δημιουργω νεο πινακα για τα μυνηματα του Trigger
+
+-- Create a new table for trigger messages
+CREATE TABLE TRIGGER_TABLE (  
+    MESSAGE VARCHAR(100)
+);
+
+DELIMITER //
+CREATE TRIGGER myTrigger BEFORE INSERT ON TRAUMATISMOS
+FOR EACH ROW  
+BEGIN         
+    IF NEW.typos_traumatismou = 'σοβαρή' THEN
+        INSERT INTO TRIGGER_TABLE VALUES('CALL AN AMBULANCE');
+    ELSEIF NEW.typos_traumatismou = 'μέτρια' THEN
+        INSERT INTO TRIGGER_TABLE VALUES('CALL A DOCTOR');
+    ELSE
+        INSERT INTO TRIGGER_TABLE VALUES('NOT CONCERNING');
+    END IF;
+SELECT * FROM TRIGGER_TABLE;
+
+END //
+DELIMITER ;
+
+INSERT INTO TRAUMATISMOS VALUES
+(123458, '2023-10-10 08:30:00', 'κάταγμα στο χέρι', 'έπεσε και χτύπησε', 'σοβαρή');
+
+
+DROP TRIGGER IF EXISTS myTrigger;
 
