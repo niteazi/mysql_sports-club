@@ -1,3 +1,4 @@
+--erwthma 4
 --erwthma 5
 
 --Count the number of matches for each athlete
@@ -119,10 +120,6 @@ CREATE TABLE TRIGGER_TABLE (
     MESSAGE VARCHAR(100)
 ); -- Δημιουργω νεο πινακα για τα μυνηματα του Trigger
 
--- Create a new table for trigger messages
-CREATE TABLE TRIGGER_TABLE (  
-    MESSAGE VARCHAR(100)
-);
 
 DELIMITER //
 CREATE TRIGGER myTrigger BEFORE INSERT ON TRAUMATISMOS
