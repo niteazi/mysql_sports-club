@@ -122,7 +122,7 @@ CREATE TABLE if not exists `PROPONHSH_PROPONHTHS` (
   `hmeromhnia` DATETIME NOT NULL,
   `typos_traumatismou` VARCHAR(30) NOT NULL,
   `anafora_symvantos` TEXT,
-  `sovarotita` VARCHAR(20) NOT NULL CHECK(sovarotita IN ('elafria', 'metria','sovari')),
+  `sovarotita` VARCHAR(20) NOT NULL CHECK(sovarotita IN ('ελαφριά', 'μέτρια','σοβαρή')),
   FOREIGN KEY (`aem_athliti`) REFERENCES `A8LITIS`(`aem_athliti`) ON DELETE CASCADE
 );
 
@@ -256,18 +256,18 @@ VALUES
 
 INSERT INTO TRAUMATISMOS
 VALUES 
-(123458, '2023-10-10 08:30:00', 'katagma sto xeri', 'epese kai xtypise', 'sovari'),
-(123456, '2022-08-05 14:45:00', 'strampouligma astragalou', 'ton esproksan', 'metria'),
-(195843, '2022-11-13 18:20:00', 'travigma wmou', 'apotomh kinhsh', 'sovari'),
-(195843, '2023-12-13 14:20:00', 'travigma wmou', 'apotomh kinhsh', 'metria'),
-(153457, '2023-12-13 14:20:00', 'traumatismos daktylou', 'xtypise thn mpala lathos', 'elafria');
+(123458, '2023-10-10 08:30:00', 'κάταγμα στο χέρι', 'έπεσε και χτύπησε', 'σοβαρή'),
+(123456, '2022-08-05 14:45:00', 'στραμπούλιγμα αστραγάλου', 'τον έσπρωξαν', 'μέτρια'),
+(195843, '2022-11-13 18:20:00', 'τράβιγμα ώμου', 'απότομη κίνηση', 'σοβαρή'),
+(195843, '2023-12-13 14:20:00', 'τράβιγμα ώμου', 'απότομη κίνηση', 'μέτρια'),
+(153457, '2023-12-13 14:20:00', 'τραυματισμός δακτύλου', 'τον χτύπησε η μπάλα', 'ελαφριά');
 
 
 INSERT INTO STATISTIKA
 VALUES 
-(1234,  90, 50, 'hlios','Asteras Korinthou'),
-(2434,  120, 100,NULL,'Aikitoi Xanthis' ),
-(3485,90,86,'synefia','Marios Karathanasis'),
-(3344, 60, 42, 'psixala', 'Giannis Papadopoulos'),
-(3479,120,103,NULL,'Phgasos Viotias');
+(1234,  90, 50, 'ήλιος','Αστέρας Κορίνθου'),
+(2434,  120, 100,NULL,'Ανίκητοι Ξάνθης' ),
+(3485,90,86,'συννεφιά','Μάριος Καραθανάσης'),
+(3344, 60, 42, 'ψιχἀλα', 'Δομίνικος Περγαμηνώντας'),
+(3479,120,103,NULL,'Πήγασος Βιωτίας');
 
