@@ -1,2 +1,0 @@
-DROP DATABASE IF EXISTS sports_club;
-CREATE DATABASE if NOT EXISTS sports_club;
