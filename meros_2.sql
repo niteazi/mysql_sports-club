@@ -82,6 +82,7 @@ ORDER BY A.aem_athliti;
 
 --sezon (etos epoxh ) kwdikos agwna athlima apotelesma antipalos
 --left join einai gia na emfanizetai kai an den exei statistika..aplo join einai gia na emfanizetai mono an exei yparxoun k stous 2 pinakes
+--left join = deksi meros xwris aristero meros = agwnas xwris statistika = aristero meros null
 CREATE VIEW SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS AS
 SELECT 
     CONCAT(SE.epoxh, ' ', SE.etos) AS 'Σεζόν', 
