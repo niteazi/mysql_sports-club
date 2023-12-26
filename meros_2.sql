@@ -1,37 +1,3 @@
--- erothma 6 
-
---INNER join αθλητών που έχουν τραυματιστεί, τι άθλημα κάνουν και το τύπο τραυματισμού
-SELECT A8LITIS.aem_athliti, A8LITIS.onomateponymo , A8LITIS.athlima, TRAUMATISMOS.hmeromhnia , TRAUMATISMOS.typos_traumatismou
-FROM A8LITIS
-INNER JOIN TRAUMATISMOS ON A8LITIS.aem_athliti = TRAUMATISMOS.aem_athliti;
-
---LEFT join εμφάνιση όλων των αθλητών ανεξαρτήτως αν έχουν τραυματιστεί ή όχι
-SELECT A8LITIS.aem_athliti, A8LITIS.onomateponymo, 
-A8LITIS.athlima, TRAUMATISMOS.hmeromhnia, TRAUMATISMOS.typos_traumatismou
-FROM A8LITIS
-LEFT JOIN TRAUMATISMOS ON A8LITIS.aem_athliti = TRAUMATISMOS.aem_athliti;
-
-
---erwthma 9 
-
-DELIMITER //
-CREATE PROCEDURE ViewAll()  -- TO PROCEDURE ΣΩΖΕΙ ΧΡΟΝΟ, ΑΝΤΙ ΝΑ ΤΑ ΓΡΑΦΩ ΟΛΑ ΞΑΝΑ ΑΠΛΟΣ ΤΟ ΚΑΛΩ 
-BEGIN
-    SELECT * FROM A8LITIS;
-    SELECT * FROM A8LIMA;
-    SELECT * FROM PROPONHTHS;
-    SELECT * FROM PROPONHSH;
-    SELECT * FROM AGWNAS;
-    SELECT * FROM SEASON;
-    SELECT * FROM EGKATASTASEIS;
-    SELECT * FROM STATISTIKA;
-    SELECT * FROM TRAUMATISMOS;
-END //
-DELIMITER ;  -- Reverting back to ;
-
-CALL ViewAll();
-
-
 --erwthma 5
 
 --Count the number of matches for each athlete
@@ -62,6 +28,22 @@ WHERE (AGWNAS.athlima, STATISTIKA.arithmos_theatwn) IN (
   JOIN AGWNAS ON STATISTIKA.kwdikos_agwna = AGWNAS.kwdikos_agwna
   GROUP BY athlima
 );
+
+
+
+-- erothma 6 
+
+--INNER join αθλητών που έχουν τραυματιστεί, τι άθλημα κάνουν και το τύπο τραυματισμού
+SELECT A8LITIS.aem_athliti, A8LITIS.onomateponymo , A8LITIS.athlima, TRAUMATISMOS.hmeromhnia , TRAUMATISMOS.typos_traumatismou
+FROM A8LITIS
+INNER JOIN TRAUMATISMOS ON A8LITIS.aem_athliti = TRAUMATISMOS.aem_athliti;
+
+--LEFT join εμφάνιση όλων των αθλητών ανεξαρτήτως αν έχουν τραυματιστεί ή όχι
+SELECT A8LITIS.aem_athliti, A8LITIS.onomateponymo, 
+A8LITIS.athlima, TRAUMATISMOS.hmeromhnia, TRAUMATISMOS.typos_traumatismou
+FROM A8LITIS
+LEFT JOIN TRAUMATISMOS ON A8LITIS.aem_athliti = TRAUMATISMOS.aem_athliti;
+
 
 
 --erwthma 7
@@ -110,3 +92,25 @@ DROP VIEW IF EXISTS SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
 -- Ερώτημα για την εμφάνιση όλων των δεδομένων των Οψεων (View)
 SELECT * FROM PROPONHSH_PROPONHTHS_A8LITIS;
 SELECT * FROM SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
+
+
+--erwthma 9 
+
+DELIMITER //
+CREATE PROCEDURE ViewAll()  -- TO PROCEDURE ΣΩΖΕΙ ΧΡΟΝΟ, ΑΝΤΙ ΝΑ ΤΑ ΓΡΑΦΩ ΟΛΑ ΞΑΝΑ ΑΠΛΟΣ ΤΟ ΚΑΛΩ 
+BEGIN
+    SELECT * FROM A8LITIS;
+    SELECT * FROM A8LIMA;
+    SELECT * FROM PROPONHTHS;
+    SELECT * FROM PROPONHSH;
+    SELECT * FROM AGWNAS;
+    SELECT * FROM SEASON;
+    SELECT * FROM EGKATASTASEIS;
+    SELECT * FROM STATISTIKA;
+    SELECT * FROM TRAUMATISMOS;
+END //
+DELIMITER ;  -- Reverting back to ;
+
+CALL ViewAll();
+
+
