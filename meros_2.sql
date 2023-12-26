@@ -90,7 +90,10 @@ ATH.onoma_athlimatos AS 'Αθλήμα',
 AG.apotelesma AS 'Αποτέλεσμα', 
 ST.antipalos AS 'Αντίπαλος'
 FROM SEASON SE, AGWNAS AG, A8LIMA ATH, STATISTIKA ST
-WHERE AG.kwdikos_agwna = ST.kwdikos_agwna AND ATH.onoma_athlimatos = AG.athlima AND SE.epoxh = AG.epoxh
+WHERE AG.kwdikos_agwna = ST.kwdikos_agwna
+AND SE.epoxh = AG.epoxh 
+AND AG.etos = SE.etos
+AND ATH.onoma_athlimatos = AG.athlima
 ORDER BY SE.etos,SE.epoxh;
 
 
@@ -99,5 +102,4 @@ DROP VIEW IF EXISTS v_PROPONHSH_PROPONHTHS_A8LITIS;
 DROP VIEW IF EXISTS SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
 -- Ερώτημα για την εμφάνιση όλων των δεδομένων της Όψης
 SELECT * FROM v_PROPONHSH_PROPONHTHS_A8LITIS;
-
 SELECT * FROM SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
