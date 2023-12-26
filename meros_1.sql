@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `A8LIMA`;
 
 CREATE TABLE IF NOT EXISTS `A8LIMA` (
   `onoma_athlimatos`  varchar(25) NOT NULL,
-  `tropos_paixnidiou` VARCHAR(10) NOT NULL CHECK(tropos_paixnidiou IN ('omadiko', 'atomiko')),
+  `tropos_paixnidiou` VARCHAR(10) NOT NULL CHECK(tropos_paixnidiou IN ('ομαδικό', 'ατομικὀ')),
   `exoplismos` TINYTEXT,
   PRIMARY KEY (`onoma_athlimatos`)
 );
@@ -142,24 +142,24 @@ CREATE TABLE IF NOT EXISTS `STATISTIKA` (
 --INSERT VALUES
 INSERT INTO A8LIMA
 VALUES 
-('Ποδόσφαιρο', 'omadiko', 'mpala'),
-('Μπάσκετ', 'omadiko', 'mpala'),
-('Τέννις', 'atomiko', 'raketes'),
-('Βόλευ', 'omadiko', 'mpala'),
-('Κολύμβηση', 'atomiko',NULL);
+('Ποδόσφαιρο', 'ομαδικό', 'μπάλα'),
+('Μπάσκετ', 'ομαδικό', 'μπάλα'),
+('Τέννις', 'ατομικὀ', 'ρακέτες'),
+('Βόλευ', 'ομαδικό', 'μπάλα'),
+('Κολύμβηση', 'ατομικὀ',NULL);
 
 
 INSERT INTO EGKATASTASEIS
 VALUES 
-(123,'ghpedo Ποδόσφαιροu 5x5','Ποδόσφαιρο', 'kleisto', 200),
-(124,'ghpedo Ποδόσφαιροu 3x3','Ποδόσφαιρο', 'kleisto', 180),
-(125,'ghpedo Ποδόσφαιροu 5x5','Ποδόσφαιρο', 'anoixto', 220),
-(128,'ghpedo Μπάσκετ','Μπάσκετ', 'kleisto', 200),
-(127,'ghpedo Μπάσκετ','Μπάσκετ', 'anoixto', 210),
-(173,'ghpedo Τέννις', 'Τέννις','anoixto', 110),
-(174,'ghpedo Βόλευ', 'Βόλευ','anoixto', 120),
-(176,'pisina Κολύμβησηs', 'Κολύμβηση','kleisto', 80),
-(175,'pisina Κολύμβησηs', 'Κολύμβηση','anoixto', 100);
+(123,'γήπεδο Ποδοσφαίρου 5x5','Ποδόσφαιρο', 'κλειστό', 200),
+(124,'γήπεδο Ποδοσφαίρου 3x3','Ποδόσφαιρο', 'κλειστό', 180),
+(125,'γήπεδο Ποδοσφαίρου 5x5','Ποδόσφαιρο', 'ανοιχτό', 220),
+(128,'γήπεδο Μπάσκετ','Μπάσκετ', 'κλειστό', 200),
+(127,'γήπεδο Μπάσκετ','Μπάσκετ', 'ανοιχτό', 210),
+(173,'γήπεδο Τέννις', 'Τέννις','ανοιχτό', 110),
+(174,'γήπεδο Βόλευ', 'Βόλευ','ανοιχτό', 120),
+(176,'πισίνα Κολύμβησης', 'Κολύμβηση','κλειστό', 80),
+(175,'πισίνα Κολύμβησης', 'Κολύμβηση','ανοιχτό', 100);
 
 INSERT INTO SEASON
 VALUES 
@@ -172,11 +172,11 @@ VALUES
 
 INSERT INTO PROPONHTHS
 VALUES
-(1234567, 'Ποδόσφαιρο', 'Georgios Gkolios', 2, 1000),
-(1234568, 'Μπάσκετ', 'Ioannis Kapis', 3, 1100),
-(1234569, 'Τέννις', 'Xrhstos Dimitriadhs', 1, 900),
-(1235469, 'Βόλευ', 'Emanouil Emanouilidis', 2, 800),
-(2359487, 'Κολύμβηση', 'Isidoros Panagiotou', 5, 1200); 
+(1234567, 'Ποδόσφαιρο', 'Γεώργιος Γκόλιος', 2, 1000),
+(1234568, 'Μπάσκετ', 'Ιωάννης Κάπης', 3, 1100),
+(1234569, 'Τέννις', 'Χρήστος Δημητριάδης', 1, 900),
+(1235469, 'Βόλευ', 'Εμανουήλ Εμανουηλίδης', 2, 800),
+(2359487, 'Κολύμβηση', 'Ισίδορος Παναγιώτου', 5, 1200); 
 
 INSERT INTO A8LITIS
 VALUES 
