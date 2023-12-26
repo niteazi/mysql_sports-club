@@ -80,7 +80,7 @@ JOIN PROPONHTHS PT ON PP.proponhtes_kwdikos = PT.kwdikos_proponhth
 JOIN A8LITIS A ON PT.kwdikos_proponhth = A.kwdikos_proponhth
 ORDER BY A.aem_athliti;
 
---sezon (etos epoxh ) kwdikos agwna athlima apotelesma antipalos
+-- Δημιουργία Όψης (View) με το κάθε αγώνα μαζί με το άθλημά του, την σεζόν,τον αντίπαλο και το αποτέλεσμα
 --left join einai gia na emfanizetai kai an den exei statistika..aplo join einai gia na emfanizetai mono an exei yparxoun k stous 2 pinakes
 --left join = deksi meros xwris aristero meros = agwnas xwris statistika = aristero meros null
 CREATE VIEW SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS AS
@@ -96,9 +96,9 @@ JOIN A8LIMA ATH ON AG.athlima = ATH.onoma_athlimatos
 LEFT JOIN STATISTIKA ST ON AG.kwdikos_agwna = ST.kwdikos_agwna
 ORDER BY SE.etos, SE.epoxh, AG.kwdikos_agwna;
 
--- Διαγραφή της Όψης
+-- Διαγραφή Όψεων (View)
 DROP VIEW IF EXISTS v_PROPONHSH_PROPONHTHS_A8LITIS;
 DROP VIEW IF EXISTS SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
--- Ερώτημα για την εμφάνιση όλων των δεδομένων της Όψης
+-- Ερώτημα για την εμφάνιση όλων των δεδομένων των Οψεων (View)
 SELECT * FROM v_PROPONHSH_PROPONHTHS_A8LITIS;
 SELECT * FROM SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
