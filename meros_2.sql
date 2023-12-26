@@ -5,7 +5,7 @@ SELECT A8LITIS.aem_athliti, A8LITIS.onomateponymo , A8LITIS.athlima, TRAUMATISMO
 FROM A8LITIS
 INNER JOIN TRAUMATISMOS ON A8LITIS.aem_athliti = TRAUMATISMOS.aem_athliti;
 
---LEFT join
+--LEFT join εμφάνιση όλων των αθλητών ανεξαρτήτως αν έχουν τραυματιστεί ή όχι
 SELECT A8LITIS.aem_athliti, A8LITIS.onomateponymo, 
 A8LITIS.athlima, TRAUMATISMOS.hmeromhnia, TRAUMATISMOS.typos_traumatismou
 FROM A8LITIS
