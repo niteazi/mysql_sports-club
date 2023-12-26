@@ -80,9 +80,24 @@ JOIN PROPONHTHS PT ON PP.proponhtes_kwdikos = PT.kwdikos_proponhth
 JOIN A8LITIS A ON PT.kwdikos_proponhth = A.kwdikos_proponhth
 ORDER BY A.aem_athliti;
 
+--sezon (etos epoxh ) kwdikos agwna athlima apotelesma antipalos
+
+CREATE VIEW SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS AS
+SELECT 
+CONCAT(SE.epoxh,' ',SE.etos) AS 'Σεζόν', 
+AG.kwdikos_agwna AS 'Κωδικός Αγώνα', 
+ATH.onoma_athlimatos AS 'Αθλήμα', 
+AG.apotelesma AS 'Αποτέλεσμα', 
+ST.antipalos AS 'Αντίπαλος'
+FROM SEASON SE, AGWNAS AG, A8LIMA ATH, STATISTIKA ST
+WHERE AG.kwdikos_agwna = ST.kwdikos_agwna AND ATH.onoma_athlimatos = AG.athlima
+ORDER BY SE.etos,SE.epoxh;
+
 
 -- Διαγραφή της Όψης
 DROP VIEW IF EXISTS v_PROPONHSH_PROPONHTHS_A8LITIS;
-
+DROP VIEW IF EXISTS SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
 -- Ερώτημα για την εμφάνιση όλων των δεδομένων της Όψης
 SELECT * FROM v_PROPONHSH_PROPONHTHS_A8LITIS;
+
+SELECT * FROM SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
