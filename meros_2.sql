@@ -64,15 +64,13 @@ WHERE (AGWNAS.athlima, STATISTIKA.arithmos_theatwn) IN (
 --PROPONHSH_PROPONHTHS pinakas g n paroume ton kwdiko proponhsewn g kathe proponhth
 CREATE VIEW PROPONHSH_PROPONHTHS_A8LITIS AS
 SELECT
-    ATHL.aem_athliti,
+    PR.kwdikos_proponhshs AS 'Κωδικός Προπόνησης',
+    PT.athlima AS 'Άθλημα',
     ATHL.onomateponymo AS 'Ονοματεπώνυμο Αθλητή',
-    PR.kwdikos_proponhshs,
-    PT.athlima AS athlima,
-    PR.hmera_dieksagwghs,
-    PR.wra_dieksagwghs,
-    PR.diarkeia_se_lepta,
-    PT.kwdikos_proponhth,
-    PT.onomateponymo AS 'Ονοματεπώνυμο Προπονητή'
+    PT.onomateponymo AS 'Ονοματεπώνυμο Προπονητή',
+    PR.hmera_dieksagwghs AS 'Ημέρα Διεξαγωγής',
+    PR.wra_dieksagwghs AS 'Ώρα Διεξαγωγής',
+    PR.diarkeia_se_lepta AS 'Διάρκεια σε λεπτά'
 FROM
     PROPONHSH PR,
     PROPONHSH_PROPONHTHS PP,
@@ -83,6 +81,7 @@ WHERE
     AND PP.proponhtes_kwdikos = PT.kwdikos_proponhth
     AND PT.kwdikos_proponhth = ATHL.kwdikos_proponhth
 ORDER BY ATHL.aem_athliti;
+
 
 
 -- Δημιουργία Όψης (View) με το κάθε αγώνα μαζί με το άθλημά του, την σεζόν,τον αντίπαλο και το αποτέλεσμα
