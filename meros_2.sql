@@ -82,8 +82,6 @@ WHERE
     AND PT.kwdikos_proponhth = ATHL.kwdikos_proponhth
 ORDER BY ATHL.aem_athliti;
 
-
-
 -- Δημιουργία Όψης (View) με το κάθε αγώνα μαζί με το άθλημά του, την σεζόν,τον αντίπαλο και το αποτέλεσμα
 --left join einai gia na emfanizetai kai an den exei statistika..aplo join einai gia na emfanizetai mono an exei yparxoun k stous 2 pinakes
 --left join = deksi meros xwris aristero meros = agwnas xwris statistika = aristero meros null
