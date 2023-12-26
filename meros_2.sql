@@ -81,21 +81,19 @@ JOIN A8LITIS A ON PT.kwdikos_proponhth = A.kwdikos_proponhth
 ORDER BY A.aem_athliti;
 
 --sezon (etos epoxh ) kwdikos agwna athlima apotelesma antipalos
-
+-- join anti g where gt den exoun oloi oi agwnes statistika
 CREATE VIEW SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS AS
 SELECT 
-CONCAT(SE.epoxh,' ',SE.etos) AS 'Σεζόν', 
-AG.kwdikos_agwna AS 'Κωδικός Αγώνα', 
-ATH.onoma_athlimatos AS 'Αθλήμα', 
-AG.apotelesma AS 'Αποτέλεσμα', 
-ST.antipalos AS 'Αντίπαλος'
-FROM SEASON SE, AGWNAS AG, A8LIMA ATH, STATISTIKA ST
-WHERE AG.kwdikos_agwna = ST.kwdikos_agwna
-AND SE.epoxh = AG.epoxh 
-AND AG.etos = SE.etos
-AND ATH.onoma_athlimatos = AG.athlima
-ORDER BY SE.etos,SE.epoxh;
-
+    CONCAT(SE.epoxh, ' ', SE.etos) AS 'Σεζόν', 
+    AG.kwdikos_agwna AS 'Κωδικός Αγώνα', 
+    ATH.onoma_athlimatos AS 'Αθλήμα', 
+    AG.apotelesma AS 'Αποτέλεσμα', 
+    ST.antipalos AS 'Αντίπαλος'
+FROM AGWNAS AG
+JOIN SEASON SE ON AG.epoxh = SE.epoxh AND AG.etos = SE.etos
+JOIN A8LIMA ATH ON AG.athlima = ATH.onoma_athlimatos
+LEFT JOIN STATISTIKA ST ON AG.kwdikos_agwna = ST.kwdikos_agwna
+ORDER BY SE.etos, SE.epoxh, AG.kwdikos_agwna;
 
 -- Διαγραφή της Όψης
 DROP VIEW IF EXISTS v_PROPONHSH_PROPONHTHS_A8LITIS;
