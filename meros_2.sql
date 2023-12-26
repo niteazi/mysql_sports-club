@@ -60,7 +60,6 @@ WHERE (AGWNAS.athlima, STATISTIKA.arithmos_theatwn) IN (
 
 --erwthma 7
 
-
 -- Δημιουργία Όψης (View) με τα στοιχεία των Αθλητών, προπονήσεων και τα στοιχεία των Προπονητών
 --nmz lathos pinakas 
 CREATE VIEW PROPONHSH_PROPONHTHS_A8LITIS AS
