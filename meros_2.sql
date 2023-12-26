@@ -61,24 +61,29 @@ WHERE (AGWNAS.athlima, STATISTIKA.arithmos_theatwn) IN (
 --erwthma 7
 
 -- Δημιουργία Όψης (View) με τα στοιχεία των Αθλητών, προπονήσεων και τα στοιχεία των Προπονητών
---nmz lathos pinakas 
+--PROPONHSH_PROPONHTHS pinakas g n paroume ton kwdiko proponhsewn g kathe proponhth
 CREATE VIEW PROPONHSH_PROPONHTHS_A8LITIS AS
 SELECT
-    A.aem_athliti,
-    A.onomateponymo AS onoma_athliti,
+    ATHL.aem_athliti,
+    ATHL.onomateponymo AS 'Ονοματεπώνυμο Αθλητή',
     PR.kwdikos_proponhshs,
     PT.athlima AS athlima,
     PR.hmera_dieksagwghs,
     PR.wra_dieksagwghs,
     PR.diarkeia_se_lepta,
     PT.kwdikos_proponhth,
-    PT.onomateponymo AS onomateponymo_proponhth
+    PT.onomateponymo AS 'Ονοματεπώνυμο Προπονητή'
 FROM
-    PROPONHSH PR
-JOIN PROPONHSH_PROPONHTHS PP ON PR.kwdikos_proponhshs = PP.proponhsh_kwdikos
-JOIN PROPONHTHS PT ON PP.proponhtes_kwdikos = PT.kwdikos_proponhth
-JOIN A8LITIS A ON PT.kwdikos_proponhth = A.kwdikos_proponhth
-ORDER BY A.aem_athliti;
+    PROPONHSH PR,
+    PROPONHSH_PROPONHTHS PP,
+    PROPONHTHS PT,
+    A8LITIS ATHL
+WHERE
+    PR.kwdikos_proponhshs = PP.proponhsh_kwdikos
+    AND PP.proponhtes_kwdikos = PT.kwdikos_proponhth
+    AND PT.kwdikos_proponhth = ATHL.kwdikos_proponhth
+ORDER BY ATHL.aem_athliti;
+
 
 -- Δημιουργία Όψης (View) με το κάθε αγώνα μαζί με το άθλημά του, την σεζόν,τον αντίπαλο και το αποτέλεσμα
 --left join einai gia na emfanizetai kai an den exei statistika..aplo join einai gia na emfanizetai mono an exei yparxoun k stous 2 pinakes
