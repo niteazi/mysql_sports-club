@@ -62,7 +62,7 @@ WHERE (AGWNAS.athlima, STATISTIKA.arithmos_theatwn) IN (
 
 
 -- Δημιουργία Όψης (View) με τα στοιχεία των Αθλητών, προπονήσεων και τα στοιχεία των Προπονητών
-CREATE VIEW v_PROPONHSH_PROPONHTHS_A8LITIS AS
+CREATE VIEW PROPONHSH_PROPONHTHS_A8LITIS AS
 SELECT
     A.aem_athliti,
     A.onomateponymo AS onoma_athliti,
@@ -97,8 +97,8 @@ LEFT JOIN STATISTIKA ST ON AG.kwdikos_agwna = ST.kwdikos_agwna
 ORDER BY SE.etos, SE.epoxh, AG.kwdikos_agwna;
 
 -- Διαγραφή Όψεων (View)
-DROP VIEW IF EXISTS v_PROPONHSH_PROPONHTHS_A8LITIS;
+DROP VIEW IF EXISTS PROPONHSH_PROPONHTHS_A8LITIS;
 DROP VIEW IF EXISTS SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
 -- Ερώτημα για την εμφάνιση όλων των δεδομένων των Οψεων (View)
-SELECT * FROM v_PROPONHSH_PROPONHTHS_A8LITIS;
+SELECT * FROM PROPONHSH_PROPONHTHS_A8LITIS;
 SELECT * FROM SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
