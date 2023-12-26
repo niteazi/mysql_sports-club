@@ -1,4 +1,6 @@
---^ erwthma 4
+--TODO erwthma 4
+
+
 --^ erwthma 5
 
 --Count the number of matches for each athlete
@@ -135,7 +137,7 @@ END //
 DELIMITER ;
 
 INSERT INTO TRAUMATISMOS VALUES
-(123458, '2023-10-10 08:30:00', 'κάταγμα στο χέρι', 'έπεσε και χτύπησε', 'σοβαρή');
+(153457, '2023-12-05 16:30:00', 'κάταγμα στο χέρι', 'έπεσε και χτύπησε', 'σοβαρή');
 
 SELECT * FROM TRIGGER_TABLE;
 
