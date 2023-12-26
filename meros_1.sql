@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `A8LITIS` (
 CREATE TABLE IF NOT EXISTS `AGWNAS` (
   `kwdikos_agwna` INT(4) NOT NULL CHECK(kwdikos_agwna BETWEEN 1000 AND 9999),
   `athlima` VARCHAR(25) NOT NULL,
-  `epoxh_season` VARCHAR(20) NOT NULL,
+  `epoxh` VARCHAR(20) NOT NULL,
   `etos` YEAR NOT NULL,
   `hmeromhnia_dieksagwghs` DATE NOT NULL,
   `wra_dieksagwghs` TIME NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `AGWNAS` (
   `eidos_match` VARCHAR(20) NOT NULL CHECK(eidos_match IN ('filiko', 'agwnistiko')),
   `topothesia` VARCHAR(20) NOT NULL CHECK(topothesia IN ('edra','ektos edras')),
   PRIMARY KEY (`kwdikos_agwna`),
-  FOREIGN KEY (`epoxh_season`, `etos`) REFERENCES `SEASON` (`epoxh`, `etos`),
+  FOREIGN KEY (`epoxh`, `etos`) REFERENCES `SEASON` (`epoxh`, `etos`),
   FOREIGN KEY (`athlima`) REFERENCES `A8LIMA`(`onoma_athlimatos`)
 );
 

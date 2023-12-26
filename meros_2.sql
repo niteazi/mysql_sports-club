@@ -90,7 +90,7 @@ ATH.onoma_athlimatos AS 'Αθλήμα',
 AG.apotelesma AS 'Αποτέλεσμα', 
 ST.antipalos AS 'Αντίπαλος'
 FROM SEASON SE, AGWNAS AG, A8LIMA ATH, STATISTIKA ST
-WHERE AG.kwdikos_agwna = ST.kwdikos_agwna AND ATH.onoma_athlimatos = AG.athlima
+WHERE AG.kwdikos_agwna = ST.kwdikos_agwna AND ATH.onoma_athlimatos = AG.athlima AND SE.epoxh = AG.epoxh
 ORDER BY SE.etos,SE.epoxh;
 
 
