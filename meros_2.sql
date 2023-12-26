@@ -1,9 +1,11 @@
--- erothma 6 INNER join
-SELECT A8LITIS.aem_athliti, A8LITIS.onomateponymo , A8LITIS.athlima
+-- erothma 6 
+
+--INNER join αθλητών που έχουν τραυματιστεί, τι άθλημα κάνουν και το τύπο τραυματισμού
+SELECT A8LITIS.aem_athliti, A8LITIS.onomateponymo , A8LITIS.athlima, TRAUMATISMOS.hmeromhnia , TRAUMATISMOS.typos_traumatismou
 FROM A8LITIS
 INNER JOIN TRAUMATISMOS ON A8LITIS.aem_athliti = TRAUMATISMOS.aem_athliti;
 
--- erothma 6 LEFT join
+--LEFT join
 SELECT A8LITIS.aem_athliti, A8LITIS.onomateponymo, 
 A8LITIS.athlima, TRAUMATISMOS.hmeromhnia, TRAUMATISMOS.typos_traumatismou
 FROM A8LITIS
