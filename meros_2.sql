@@ -1,5 +1,5 @@
---erwthma 4
---erwthma 5
+--^ erwthma 4
+--^ erwthma 5
 
 --Count the number of matches for each athlete
 SELECT A8LITIS.aem_athliti,
@@ -32,7 +32,7 @@ WHERE (AGWNAS.athlima, STATISTIKA.arithmos_theatwn) IN (
 
 
 
--- erothma 6 
+--^ erothma 6 
 
 --INNER join αθλητών που έχουν τραυματιστεί, τι άθλημα κάνουν και το τύπο τραυματισμού
 SELECT A8LITIS.aem_athliti, A8LITIS.onomateponymo , A8LITIS.athlima, TRAUMATISMOS.hmeromhnia , TRAUMATISMOS.typos_traumatismou
@@ -47,7 +47,7 @@ LEFT JOIN TRAUMATISMOS ON A8LITIS.aem_athliti = TRAUMATISMOS.aem_athliti;
 
 
 
---erwthma 7
+--^ erwthma 7
 
 -- Δημιουργία Όψης (View) με τα στοιχεία των Αθλητών, προπονήσεων και τα στοιχεία των Προπονητών
 --PROPONHSH_PROPONHTHS pinakas g n paroume ton kwdiko proponhsewn g kathe proponhth
@@ -87,15 +87,14 @@ JOIN A8LIMA ATH ON AG.athlima = ATH.onoma_athlimatos
 LEFT JOIN STATISTIKA ST ON AG.kwdikos_agwna = ST.kwdikos_agwna
 ORDER BY SE.etos, SE.epoxh, AG.kwdikos_agwna;
 
+-- Διαγραφή Όψεων (View)
+DROP VIEW IF EXISTS PROPONHSH_PROPONHTHS_A8LITIS;
+DROP VIEW IF EXISTS SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
 -- Ερώτημα για την εμφάνιση όλων των δεδομένων των Οψεων (View)
 SELECT * FROM PROPONHSH_PROPONHTHS_A8LITIS;
 SELECT * FROM SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
 
--- Διαγραφή Όψεων (View)
-DROP VIEW IF EXISTS PROPONHSH_PROPONHTHS_A8LITIS;
-DROP VIEW IF EXISTS SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
-
---erwthma 8
+--^ erwthma 8
 
 DELIMITER //
 CREATE PROCEDURE ViewAll()  -- TO PROCEDURE ΣΩΖΕΙ ΧΡΟΝΟ, ΑΝΤΙ ΝΑ ΤΑ ΓΡΑΦΩ ΟΛΑ ΞΑΝΑ ΑΠΛΟΣ ΤΟ ΚΑΛΩ 
@@ -115,7 +114,7 @@ DELIMITER ;  -- Reverting back to ;
 CALL ViewAll();
 
 
---erwthma 9 
+--^ erwthma 9 
 
 CREATE TABLE TRIGGER_TABLE (  
     MESSAGE VARCHAR(100)
