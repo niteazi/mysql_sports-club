@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Διαγραφή Αθλητή</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Διαγραφή Αθλητή</h1>
+    <form name="delete_athlete" action="delete_a8litis.php" method="POST">
+
+        <label for="aem_athliti">ΑΕΜ:</label>
+        <input type="number" name="aem_athliti" required min="100000" max="999999" ><br>
+
+        <input type="reset" value="Καθαρισμός">
+        <input type="submit" value="Διαγραφή">
+    </form>
+</body>
+</html>
