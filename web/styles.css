@@ -1,12 +1,11 @@
-/* styles.css */
 
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #f3f3f3;
 }
 
-/* styles.css */
-
+/*πίνακας σε σελίδα προβολής*/
 table {
     border-collapse: collapse;
     width: 80%;
@@ -20,10 +19,107 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #04AA6D;
+    color: white;
 }
+
 
 #center {
     text-align: center;
 }
+
+/*χωρίζει τα πεδία σε ορθογώνια*/
+.subs {
+    max-width: 600px; 
+    margin: 20px auto;
+    background-color: #fffefe;
+    padding: 20px;
+    padding-top: 1.8%;
+    padding-bottom: 1%;   
+    border-radius: 8px;
+    display: grid;
+    gap: 5px; /* Space between columns and rows */
+    border: 0.01em solid #e1e1e1;
+}
+
+/*labels των πεδίων*/
+label {
+    margin-bottom: 1.2%; 
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+
+/*border μόνο στο κάτω μέρος*/
+input[type=text],input[type=number],input[type=date],select {
+    border: none;
+    border-bottom: 1px solid #555;
+
+}
+
+/*κουμπιά submit και reset να είναι δίπλα δίπλα*/
+#submit_buttons {
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    gap: 10px; /* Space between columns and rows */
+    background-color: transparent; /*για να μην έχουν background όπως το subs*/
+    border:none;
+
+    
+}
+
+/*default χρώμα submit*/
+input[type=submit] {
+    background-color: #5e5bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/*default χρώμα reset*/
+input[type=reset] {
+    background-color: transparent;
+    color: #5e5bff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/*χρώμα reset όταν είναι σε σελίδα delete*/
+input[type=reset][class=delete] {
+    color: #e84f5a ;
+   
+}
+
+/*χρώμα submit όταν είναι σε σελίδα delete*/
+input[type=submit][class=delete] {
+    background-color: #e84f5a;
+
+}
+
+/*ο default τίτλος της φόρμας*/
+.form_title {
+    box-shadow:  0rem -0.4rem #5e5bff; /*μπλε γραμμή πάνω*/
+    border-radius: 3px;
+    padding: 20px;
+    padding-top: 0.7%;
+    padding-bottom: 1%;
+
+}
+
+/*όταν είναι σε σελίδα delete ο τίτλος τότε η γραμμή αλλάζει χρώμα*/
+.delete_title {
+    box-shadow: 0rem -0.4rem #e84f5a;
+}
+
+
+
 

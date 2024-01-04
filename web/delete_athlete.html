@@ -8,14 +8,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Διαγραφή Αθλητή</h1>
+  
     <form name="delete_athlete" action="delete_a8litis.php" method="POST">
 
-        <label for="aem_athliti">ΑΕΜ:</label>
-        <input type="number" name="aem_athliti" required min="100000" max="999999" ><br>
+        <div class="subs delete_title form_title" >
+            <h2>Διαγραφή Αθλητή</h2>
+        </div>
+        
+        <div class="subs">
+            <label for="aem_athliti">ΑΕΜ:</label>
+            <input type="number" name="aem_athliti" required min="100000" max="999999" placeholder="Εισάγετε 6ψήφιο ΑΕΜ"><br>
+        </div>
 
-        <input type="reset" value="Καθαρισμός">
-        <input type="submit" value="Διαγραφή">
+        <div class="subs" id="submit_buttons">
+            <input type="reset" class="delete" value="Καθαρισμός">
+            <input type="submit" class="delete" value="Διαγραφή">
+        </div>
     </form>
 </body>
 </html>
