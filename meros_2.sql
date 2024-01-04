@@ -53,13 +53,6 @@ WHERE (AGWNAS.athlima, STATISTIKA.arithmos_theatwn) IN (
   GROUP BY athlima
 );
 
--- 5 max 
-
-SELECT AGWNAS.athlima, MAX(STATISTIKA.arithmos_theatwn) AS MaxTheatwn
-FROM STATISTIKA
-JOIN AGWNAS ON STATISTIKA.kwdikos_agwna = AGWNAS.kwdikos_agwna
-GROUP BY AGWNAS.athlima;
-
 -- 5 min
 
 SELECT SEASON.epoxh, SEASON.etos, MAX(SEASON.synolo_nikwn) AS MaxWins
