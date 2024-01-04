@@ -1,5 +1,26 @@
 --TODO erwthma 4
 
+--4a, every athlete detail their name starts with o
+SELECT * FROM A8LITIS
+WHERE onomateponymo LIKE 'O%';
+
+--4b, every detail from coaches where their pay is higher than 900$, low to high
+SELECT * FROM PROPONHTHS
+WHERE amivi > 900
+ORDER BY amivi ASC;
+
+--4c, every detail from friendly matches where we won 
+SELECT * FROM AGWNAS
+WHERE apotelesma = 'nikh' AND eidos_match = 'filiko';
+
+-- every detail from matches where we won and it was either a friendly match or the match 1234
+SELECT * FROM AGWNAS
+WHERE apotelesma = 'nikh' AND (eidos_match = 'filiko' OR kwdikos_agwna = 1234);
+
+-- every detail from matches where we won and it was either a competitive match or the match 1234
+SELECT * FROM AGWNAS
+WHERE apotelesma = 'nikh' AND (eidos_match = 'agwnistiko' OR kwdikos_agwna = 1234);
+
 
 --^ erwthma 5
 
@@ -32,7 +53,20 @@ WHERE (AGWNAS.athlima, STATISTIKA.arithmos_theatwn) IN (
   GROUP BY athlima
 );
 
+--TODO 5
 
+-- 5 max 
+
+SELECT AGWNAS.athlima, MAX(STATISTIKA.arithmos_theatwn) AS MaxTheatwn
+FROM STATISTIKA
+JOIN AGWNAS ON STATISTIKA.kwdikos_agwna = AGWNAS.kwdikos_agwna
+GROUP BY AGWNAS.athlima;
+
+-- 5 min
+
+SELECT SEASON.epoxh, SEASON.etos, MAX(SEASON.synolo_nikwn) AS MaxWins
+FROM SEASON
+GROUP BY SEASON.epoxh, SEASON.etos;
 
 --^ erothma 6 
 
