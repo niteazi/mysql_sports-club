@@ -53,8 +53,6 @@ WHERE (AGWNAS.athlima, STATISTIKA.arithmos_theatwn) IN (
   GROUP BY athlima
 );
 
---TODO 5
-
 -- 5 max 
 
 SELECT AGWNAS.athlima, MAX(STATISTIKA.arithmos_theatwn) AS MaxTheatwn
