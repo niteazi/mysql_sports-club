@@ -7,25 +7,43 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <form name="add_athlete" action="insert_a8litis.php" method="POST">
+
+    <div class="navbar">
+        <a href="#home">Αρχική</a>
+        <div class="dropdown">
+          <button class="dropbtn">Αθλητές 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="prosthiki_athliti.html">Εισαγωγή</a>
+            <a href="delete_athlete.html">Διαγραφή</a>
+            <a href="view_athletes.php">Προβολή</a>
+          </div>
+        </div> 
+      </div>
+
+
+
+    <form name="add_athlete" action="prosthiki_athliti.php" method="POST">
 
         <div class="subs form_title" >
         <h2>Προσθήκη Νέου Αθλητή</h2>
         </div>
 
         <div class="subs">
-            <label for="aem_athliti">ΑΕΜ:</label>
+            <label for="aem_athliti" class="required" >ΑΕΜ:</label>
             <input type="number" name="aem_athliti" required min="100000" max="999999" placeholder="Εισάγετε νέο εξαψήφιο AEM" ><br>
         </div>
 
         <div class="subs">
-            <label for="onomateponymo">Ονοματεπώνυμο:</label>
+            <label for="onomateponymo" class="required" >Ονοματεπώνυμο:</label>
             <input type="text" name="onomateponymo" maxlength="40" placeholder="Εισάγετε Ονοματεπώνυμο"><br>
         </div>
 
         <div class="subs">
-            <label for="fylo">Φύλο:</label>
+            <label for="fylo" class="required" >Φύλο:</label>
             <select name="fylo" required>
                 <option value="" disabled selected></option>
                 <option value="Άνδρας">Άνδρας</option>
@@ -34,36 +52,35 @@
         </div>
 
         <div class="subs">
-            <label for="hmerominia_eggrafis">Ημερομηνία Εγγραφής:</label>
+            <label for="hmerominia_eggrafis" class="required" >Ημερομηνία Εγγραφής:</label>
             <input type="date" id="hmerominia_eggrafis" name="hmerominia_eggrafis" required><br>
         </div>
 
         <div class="subs">
-            <label for="hmerominia_gennhshs">Ημερομηνία Γέννησης:</label>
+            <label for="hmerominia_gennhshs" class="required" >Ημερομηνία Γέννησης:</label>
             <input type="date" name="hmerominia_gennhshs" required><br>
         </div>
 
         <div class="subs">
-            <label for="kwdikos_proponhth">Κωδικός Προπονητή:</label>
-            <input type="text"  name="kwdikos_proponhth"  maxlength="7" pattern=".{7}" placeholder="Εισάγετε κωδικό Προπονητή"><br>
+            <label for="kwdikos_proponhth" class="required" >Κωδικός Προπονητή:</label>
+            <input type="text" name="kwdikos_proponhth" maxlength="7" pattern=".{7}" placeholder="Εισάγετε κωδικό Προπονητή">
+            <button type="button" id="loadButton" style="display: none;" onclick="loadCoachSports()">Επιλογή</button><br>
         </div>
 
         <div class="subs">
-            <label for="athlima">Άθλημα:</label>
-            <select name="athlima" required>
-                <option value="" disabled selected></option>
-                <option value="Βόλευ">Βόλευ</option>
-                <option value="Κολύμβηση">Κολύμβηση</option>
-                <option value="Μπάσκετ">Μπάσκετ</option>
-                <option value="Ποδόσφαιρο">Ποδόσφαιρο</option>
-                <option value="Τέννις">Τέννις</option>
-            </select><br>
+            <label for="athlima" class="required" >Άθλημα:</label>
+            <table id="athlimaTable">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
         </div>
 
     <div class="subs" id="submit_buttons">
         <input type="reset" value="Καθαρισμός">
-        <input type="submit"  value="Προσθήκη">
+        <input type="submit" id="ponoc" value="Προσθήκη">
     </div>
     </form>
 </body>
+
 </html>

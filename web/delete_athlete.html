@@ -9,6 +9,21 @@
 </head>
 <body>
   
+    <div class="navbar">
+        <a href="#home">Αρχική</a>
+        <div class="dropdown">
+          <button class="dropbtn">Αθλητές 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="prosthiki_athliti.html">Εισαγωγή</a>
+            <a href="delete_athlete.html">Διαγραφή</a>
+            <a href="view_athletes.php">Προβολή</a>
+          </div>
+        </div> 
+      </div>
+
+
     <form name="delete_athlete" action="delete_a8litis.php" method="POST">
 
         <div class="subs delete_title form_title" >
@@ -16,7 +31,7 @@
         </div>
         
         <div class="subs">
-            <label for="aem_athliti">ΑΕΜ:</label>
+            <label for="aem_athliti" class="required">ΑΕΜ:</label>
             <input type="number" name="aem_athliti" required min="100000" max="999999" placeholder="Εισάγετε 6ψήφιο ΑΕΜ"><br>
         </div>
 

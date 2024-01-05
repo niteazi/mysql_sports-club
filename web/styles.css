@@ -1,15 +1,16 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
     background-color: #f3f3f3;
+    margin-left: 0;
+    margin-right: 0; /*για να κάθεται καλά το navbar*/
 }
 
 /*πίνακας σε σελίδα προβολής*/
 table {
     border-collapse: collapse;
     width: 80%;
-    margin: 20px auto;
+    margin: 3% auto;
 }
 
 th, td {
@@ -23,10 +24,20 @@ th {
     color: white;
 }
 
-
+#provoli_caption 
+{
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
 #center {
     text-align: center;
 }
+
+#provoli_pinaka tr:nth-child(even){background-color:rgb(230, 230, 230);}
+
+#provoli_pinaka tr:hover {background-color: #d6dfe9;}
 
 /*χωρίζει τα πεδία σε ορθογώνια*/
 .subs {
@@ -93,6 +104,15 @@ input[type=reset] {
     font-weight: 600;
 }
 
+input[type=submit]:hover {
+    background-color: #2b28cd;
+    color: white;
+}
+
+input[type=reset]:hover {
+    color: #2b28cd;
+}
+
 /*χρώμα reset όταν είναι σε σελίδα delete*/
 input[type=reset][class=delete] {
     color: #e84f5a ;
@@ -102,6 +122,16 @@ input[type=reset][class=delete] {
 /*χρώμα submit όταν είναι σε σελίδα delete*/
 input[type=submit][class=delete] {
     background-color: #e84f5a;
+
+}
+
+input[type=reset][class=delete]:hover {
+    color: #d22e39 ;
+   
+}
+
+input[type=submit][class=delete]:hover {
+    background-color: #d22e39;
 
 }
 
@@ -120,6 +150,90 @@ input[type=submit][class=delete] {
     box-shadow: 0rem -0.4rem #e84f5a;
 }
 
+/*πίνακας που δείχνει το άθλημα ανάλογα με το κωδικό του προπονητή*/
+#athlimaTable {
+    border-collapse: collapse;
+    margin-left: -8px; 
+    margin-top: -10px; 
+    font-size: 14px;
+    color: #555;
 
+}
 
+#athlimaTable th, #athlimaTable td {
+    border: none;
+    padding: 8px;
+    text-align: left;
+}
 
+/* */
+
+.navbar {
+    margin-top: -10px;
+    overflow: hidden;
+    background-color: #313131;
+    width: 100%; /* Set the width to 100% */
+}
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  /*hover στο navbar*/
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #5d5d5d;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /*hover στο dropdown*/
+  .dropdown-content a:hover {
+    background-color: #ededed;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/* αστερισκό στα required πεδία που έχουν κλάση required στο label */
+.required::after {
+    content: ' *';
+    color: red;
+}
