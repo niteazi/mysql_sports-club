@@ -114,9 +114,9 @@ SELECT * FROM PROPONHSH_PROPONHTHS_A8LITIS;
 SELECT * FROM SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
 
 --^ ερώτημα 8
-
+--εμφάνιση όλων των πινάκων ταυτόχρονα
 DELIMITER //
-CREATE PROCEDURE ViewAll()  -- TO PROCEDURE ΣΩΖΕΙ ΧΡΟΝΟ, ΑΝΤΙ ΝΑ ΤΑ ΓΡΑΦΩ ΟΛΑ ΞΑΝΑ ΑΠΛΟΣ ΤΟ ΚΑΛΩ 
+CREATE PROCEDURE ViewAll()  
 BEGIN
     SELECT * FROM A8LITIS;
     SELECT * FROM A8LIMA;
