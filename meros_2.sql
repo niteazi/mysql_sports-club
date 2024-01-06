@@ -1,15 +1,15 @@
---^ erwthma 4
+--^ ερώτημα 4
 
---4a, πληροφορίες κάθε αθλητή που το όνομά του ξεκινάει με Σ
+--πληροφορίες κάθε αθλητή που το όνομά του ξεκινάει με Σ
 SELECT * FROM A8LITIS
 WHERE onomateponymo LIKE 'Σ%';
 
---4b, πληροφορίες κάθε προπονητή που η αμοιβή του είναι άνω των 900. Αύξουσα σειρά
+--πληροφορίες κάθε προπονητή που η αμοιβή του είναι άνω των 900. Αύξουσα σειρά
 SELECT * FROM PROPONHTHS
 WHERE amivi > 900
 ORDER BY amivi ASC;
 
---4c,πληροφορίες κάθε φιλικού αγώνα με αποτέλεσμα νίκη
+--πληροφορίες κάθε φιλικού αγώνα με αποτέλεσμα νίκη
 SELECT * FROM AGWNAS
 WHERE apotelesma = 'νίκη' AND eidos_match = 'φιλικό';
 
@@ -22,7 +22,7 @@ SELECT * FROM AGWNAS
 WHERE apotelesma = 'νίκη' AND (eidos_match = 'αγωνιστικό' OR kwdikos_agwna = 1234);
 
 
---^ erwthma 5
+--^ ερώτημα 5
 
 --σε πόσους αγώνες έχει συμμετάσχει κάθε αθλητής που έχει λάβει μέρος σε αγώνα τουλάχιστον 1 φορά
 SELECT A8LITIS.aem_athliti,
@@ -42,7 +42,7 @@ JOIN AGWNAS ON STATISTIKA.kwdikos_agwna = AGWNAS.kwdikos_agwna
 GROUP BY AGWNAS.athlima;
 
 
---^ erothma 6 
+--^ ερώτημα 6 
 
 --INNER join,εμφάνιση αθλητών που έχουν τραυματιστεί, τι άθλημα κάνουν και το τύπο τραυματισμού
 SELECT 
@@ -66,10 +66,10 @@ LEFT JOIN TRAUMATISMOS ON A8LITIS.aem_athliti = TRAUMATISMOS.aem_athliti;
 
 
 
---^ erwthma 7
+--^ ερώτημα 7
 
 -- Δημιουργία Όψης (View) με τα στοιχεία των Αθλητών, προπονήσεων και τα στοιχεία των Προπονητών
---PROPONHSH_PROPONHTHS pinakas g n paroume ton kwdiko proponhsewn g kathe proponhth
+--Χρησιμοποιούμε τον πίνακα PROPONHSH_PROPONHTHS για να πάρουμε τον κωδικό προπόνησης για κάθε προπονητή
 CREATE VIEW PROPONHSH_PROPONHTHS_A8LITIS AS
 SELECT
     PR.kwdikos_proponhshs AS 'Κωδικός Προπόνησης',
@@ -91,8 +91,8 @@ WHERE
 ORDER BY ATHL.aem_athliti;
 
 -- Δημιουργία Όψης (View) με το κάθε αγώνα μαζί με το άθλημά του, την σεζόν,τον αντίπαλο και το αποτέλεσμα
---left join einai gia na emfanizetai kai an den exei statistika..aplo join einai gia na emfanizetai mono an exei yparxoun k stous 2 pinakes
---left join = deksi meros xwris aristero meros = agwnas xwris statistika = aristero meros null
+--LEFT JOIN είναι για να εμφανιζεται ακόμη και αν δεν εχει στατιστικα..απλο join ειναι για να εμφανίζεται μονο αν εχει και στους 2 πινακες
+--LEFT JOIN = δεξι μερος xwris αριστερό μερος  = αγωνας χωρις στατιστικα = δεξι μερος null
 CREATE VIEW SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS AS
 SELECT 
     CONCAT(SE.epoxh, ' ', SE.etos) AS 'Σεζόν', 
@@ -113,7 +113,7 @@ DROP VIEW IF EXISTS SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
 SELECT * FROM PROPONHSH_PROPONHTHS_A8LITIS;
 SELECT * FROM SEASON_AGWNAS_ATHLIMA_APOTELESMA_ANTIPALOS;
 
---^ erwthma 8
+--^ ερώτημα 8
 
 DELIMITER //
 CREATE PROCEDURE ViewAll()  -- TO PROCEDURE ΣΩΖΕΙ ΧΡΟΝΟ, ΑΝΤΙ ΝΑ ΤΑ ΓΡΑΦΩ ΟΛΑ ΞΑΝΑ ΑΠΛΟΣ ΤΟ ΚΑΛΩ 
@@ -133,7 +133,7 @@ DELIMITER ;  -- Reverting back to ;
 CALL ViewAll();
 
 
---^ erwthma 9 
+--^ ερώτημα 9 
 
 CREATE TABLE TRIGGER_TABLE (  
     MESSAGE VARCHAR(100)
