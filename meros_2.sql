@@ -1,8 +1,8 @@
 --TODO erwthma 4
 
---4a, every athlete detail their name starts with o
+--4a, every athlete detail their name starts with Σ
 SELECT * FROM A8LITIS
-WHERE onomateponymo LIKE 'O%';
+WHERE onomateponymo LIKE 'Σ%';
 
 --4b, every detail from coaches where their pay is higher than 900$, low to high
 SELECT * FROM PROPONHTHS
