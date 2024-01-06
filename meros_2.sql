@@ -1,10 +1,10 @@
 --TODO erwthma 4
 
---4a, every athlete detail their name starts with Σ
+--4a, πληροφορίες κάθε αθλητή που το όνομά του ξεκινάει με Σ
 SELECT * FROM A8LITIS
 WHERE onomateponymo LIKE 'Σ%';
 
---4b, every detail from coaches where their pay is higher than 900$, low to high
+--4b, πληροφορίες κάθε προπονητή που η αμοιβή του είναι άνω των 900. Αύξουσα σειρά
 SELECT * FROM PROPONHTHS
 WHERE amivi > 900
 ORDER BY amivi ASC;
