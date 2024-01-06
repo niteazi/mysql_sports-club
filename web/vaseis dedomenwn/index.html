@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" id="homepage_body">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Αρχική</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Αρχική</a>
+            <div class="dropdown">
+                <button class="dropbtn">Αθλητές 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="prosthiki_athliti.html">Εισαγωγή</a>
+                    <a href="delete_athlete.html">Διαγραφή</a>
+                    <a href="view_athletes.php">Προβολή</a>
+                </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn">Αθλήματα 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="insert_athlima.html">Εισαγωγή</a>
+                    <a href="delete_athlima.html">Διαγραφή</a>
+                    <a href="select_athlima.php">Προβολή</a>
+                </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn">Στατιστικά 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="insert_statistika.html">Εισαγωγή</a>
+                    <a href="delete_statistika.html">Διαγραφή</a>
+                    <a href="select_statistika.php">Προβολή</a>
+                </div>
+            </div> 
+    </div>
+
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <div class="slides_home fade">
+        <div class="overlay "></div>
+
+      <img src="sports_center.jpg" id="home_image">
+      <div class="home_caption " id="caption_title">Αθλητικός Σύλλογος Καβάλας</div>
+    </div>
+    
+    <div class="slides_home fade">
+        <div class="overlay "></div>
+
+        <img src="football.jpg" id="home_image">
+        <div class="home_caption">Ποδόσφαιρο</div>
+    </div>
+
+    <div class="slides_home fade" >
+        <div class="overlay "></div>
+
+      <img src="tennis.jpg" id="home_image">
+      <div class="home_caption">Τέννις</div>
+    </div>
+    
+    <div class="slides_home fade">
+        <div class="overlay "></div>
+        <img src="swimming.jpg" id="home_image">
+        <div class="home_caption">Κολύμβηση</div>
+    </div>
+
+    <div class="slides_home fade">
+        <div class="overlay "></div>
+        <img src="volleyball.jpg" id="home_image">
+        <div class="home_caption">Βόλευ</div>
+    </div>
+
+    <div class="slides_home fade">
+        <div class="overlay "></div>
+        <img src="basketball.jpg" id="home_image">
+        <div class="home_caption">Μπάσκετ</div>
+    </div>
+    <div style="text-align:center" id="dots-container">
+        <!-- Dots will be dynamically added here -->
+    </div>
+
+
+    </div>
+    
+  
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slides_home");
+  let dotsContainer = document.getElementById("dots-container");
+  
+  // Clear existing dots
+  dotsContainer.innerHTML = '';
+
+  // Create and append dots based on the number of slides
+  for (i = 0; i < slides.length; i++) {
+    let dot = document.createElement("span");
+    dot.className = "dot";
+    dotsContainer.appendChild(dot);
+  }
+
+  // Display the appropriate slide
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }    
+  for (i = 0; i < dotsContainer.children.length; i++) {
+    dotsContainer.children[i].className = dotsContainer.children[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dotsContainer.children[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+</html>

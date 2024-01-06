@@ -2,7 +2,7 @@
 document.getElementById('hmerominia_eggrafis').valueAsDate = new Date();
 
 
-// Function to trigger the dynamic loading of sports based on coach code
+// φόρτωση του αθλήματος ανάλογα το κωδικό του προπονητή που επιλέχθηκε
 function loadCoachSports() {
     var coachCode = document.getElementsByName("kwdikos_proponhth")[0].value;
 
@@ -27,3 +27,4 @@ document.getElementsByName("kwdikos_proponhth")[0].addEventListener("input", loa
 window.onload = function () {
     loadCoachSports();
 };
+

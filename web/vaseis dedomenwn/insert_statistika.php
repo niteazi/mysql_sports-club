@@ -13,7 +13,7 @@ $antipalos =$_POST['antipalos'];
 $checkAgwnaQuery = "SELECT * FROM agwnas WHERE kwdikos_agwna = '$kwdikos_agwna'";
 $resultAgwna = mysqli_query($conne, $checkAgwnaQuery);
 
-// τσεκάρουμε αν υπάρχουν ήδη στατιστικά για αυτόν τον αγώνα	
+// τσεκάρουμε αν υπάρχουν ήδη στατιστικά για αυτόν τον αγώνα    
 $checkStatistikaQuery = "SELECT * FROM statistika WHERE kwdikos_agwna = '$kwdikos_agwna'";
 $resultStatistika = mysqli_query($conne, $checkStatistikaQuery);
 
@@ -42,4 +42,4 @@ if (mysqli_num_rows($resultAgwna) > 0) {
 
 // Close the database connection
 mysqli_close($conne);
-?>
+?> 

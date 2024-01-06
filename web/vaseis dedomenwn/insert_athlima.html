@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> Εισαγωγή Δεδομένων </title>
+    <link rel="stylesheet" type="text/css" href="style_athlima.css">
+</head>
+
+<body>
+    
+    <div class="navbar">
+        <a href="index.html">Αρχική</a>
+            <div class="dropdown">
+                <button class="dropbtn">Αθλητές 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="prosthiki_athliti.html">Εισαγωγή</a>
+                    <a href="delete_athlete.html">Διαγραφή</a>
+                    <a href="view_athletes.php">Προβολή</a>
+                </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn">Αθλήματα 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="insert_athlima.html">Εισαγωγή</a>
+                    <a href="delete_athlima.html">Διαγραφή</a>
+                    <a href="select_athlima.php">Προβολή</a>
+                </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn">Στατιστικά 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="insert_statistika.html">Εισαγωγή</a>
+                    <a href="delete_statistika.html">Διαγραφή</a>
+                    <a href="select_statistika.php">Προβολή</a>
+                </div>
+            </div> 
+    </div>
+
+    <div id="title-container">
+        <h1 align=center>Εισαγωγή Δεδομένων</h1>
+    </div>
+
+    <div id="choices-container" class="form-container">
+        <form name="insert" method="post" action="insert_athlima.php">
+            <label for="onoma_athlimatos" class="required">Αθλήμα</label>
+            <input name="onoma_athlimatos" type="text" size="2" required>
+
+            <label for="tropos_paixnidiou" class="required">Επιλογή:</label>
+            <select id="tropos_paixnidiou" name="tropos_paixnidiou" required>
+                <option value="ομαδικό">ομαδικό</option>
+                <option value="ατομικό">ατομικό</option>
+            </select>
+
+            <label for="exoplismos">Εξοπλισμός:</label>
+            <input name="exoplismos" type="text" size="10">
+
+            <div class="actions">
+                <input type="reset" value="Καθαρισμός 🗑️">
+                <input type="submit" name="insert" value="Εισαγωγή 📝">
+            </div>
+        </form>
+    </div>
+
+   
+
+</body>
+
+</html>

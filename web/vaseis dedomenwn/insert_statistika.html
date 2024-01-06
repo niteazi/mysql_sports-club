@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Προσθήκη Νέων Στατιστικών Αγώνα</title>
+    <link rel="stylesheet" href="style_statistika.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Αρχική</a>
+            <div class="dropdown">
+                <button class="dropbtn">Αθλητές 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="prosthiki_athliti.html">Εισαγωγή</a>
+                    <a href="delete_athlete.html">Διαγραφή</a>
+                    <a href="view_athletes.php">Προβολή</a>
+                </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn">Αθλήματα 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="insert_athlima.html">Εισαγωγή</a>
+                    <a href="delete_athlima.html">Διαγραφή</a>
+                    <a href="select_athlima.php">Προβολή</a>
+                </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn">Στατιστικά 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="insert_statistika.html">Εισαγωγή</a>
+                    <a href="delete_statistika.html">Διαγραφή</a>
+                    <a href="select_statistika.php">Προβολή</a>
+                </div>
+            </div> 
+    </div>
+
+    
+    <h1>Προσθήκη Νέων Στατιστικών Αγώνα</h1>
+    <form name="add_match" action="insert_statistika.php" method="POST">
+
+        <label for="kwdikos_agwna" class="required">Κωδικός Αγώνα:</label>
+        <input type="number" name="kwdikos_agwna" min="1000" max="9999" required><br> <br>
+
+        <label for="diarkeia_se_lepta" class="required">Διάρκεια Αγώνα σε Λεπτά:</label>
+        <input type="number" name="diarkeia_se_lepta" max="999" ><br> <br>
+
+        <label for="arithmos_theatwn">Αριθμός Θεατών:</label>
+        <input type="number" name="arithmos_theatwn" max="99999" required><br> <br>
+
+        <label for="kairikes_synthikes">Καιρικές Συνθήκες:</label>
+        <input type="text" name="kairikes_synthikes" maxlength="30"><br> <br>
+
+        <label for="antipalos">Αντίπαλος:</label>
+        <input type="text" name="antipalos" maxlength="30"><br> <br> <br> 
+
+
+        <input type="reset" value="Καθαρισμός">
+        <input type="submit" value="Προσθήκη">
+    </form>
+</body>
+</html>

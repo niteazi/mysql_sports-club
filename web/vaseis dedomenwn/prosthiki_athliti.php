@@ -41,4 +41,7 @@ if(mysqli_num_rows($resultA8litis) > 0) {
 
 // Κλείσιμο της σύνδεσης με τη βάση δεδομένων
 mysqli_close($conne);
+
+echo "<br><button onclick=\"location.href='prosthiki_athliti.html';\"> Επιστροφή </button>";
+
 ?>

@@ -1,0 +1,155 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8e7f4;
+    margin-left: 0;
+    margin-right: 0; /*για να κάθεται καλά το navbar*/
+}
+
+/*πίνακας σε σελίδα προβολής*/
+table {
+    width: 80%;
+    margin: 3% auto;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #dbafd0;
+}
+
+/*labels των πεδίων*/
+label {
+    margin-bottom: 1.2%; 
+    font-weight: 600;
+    color: #000000;
+    font-size: 16px;
+}
+
+h1{
+    text-align: center;
+    border: #000000;
+    padding: 2px;
+  }
+
+form {
+    text-align: left;
+    margin-left: 600px;
+    margin-top: 20;
+}
+
+input[type=submit] {
+    background-color: #0400ff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/*default χρώμα reset*/
+input[type=reset] {
+    background-color: transparent;
+    color: #790909;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+input[type=submit]:hover {
+    background-color: #030249;
+    color: white;
+}
+
+input[type=reset]:hover {
+    color: #440303;
+}
+
+
+
+/* */
+
+.navbar {
+    margin-top: -8px;
+    overflow: hidden;
+    background-color: #313131;
+    width: 100%; /* Set the width to 100% */
+}
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  /*hover στο navbar*/
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #5d5d5d;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /*hover στο dropdown*/
+  .dropdown-content a:hover {
+    background-color: #ededed;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+
+
+/* αστερισκό στα required πεδία που έχουν κλάση required στο label */
+.required::after {
+    content: ' *';
+    color: red;
+}
+
+
+

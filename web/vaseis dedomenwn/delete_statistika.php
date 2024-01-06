@@ -1,12 +1,11 @@
 <?php
-//συμπεριλαμβάνουμε το connect file 
 include 'connect.php';
 
 // Λήψη των τιμών POST
-$aem_athliti = $_POST['aem_athliti'];
+$kwdikos_agwna = $_POST['kwdikos_agwna'];
 
 // Σύνταξη εντολής SQL για διαγραφή δεδομένων
-$qry = "DELETE FROM a8litis WHERE aem_athliti=".$aem_athliti;
+$qry = "DELETE FROM statistika WHERE kwdikos_agwna=".$kwdikos_agwna;
 // Εκτέλεση εντολής
 $qryexe = mysqli_query($conne, $qry);
 

@@ -22,7 +22,6 @@ if (isset($_POST['kwdikos_proponhth'])) {
     }
     
 }
-
 $conne->close();
 ?>
 
