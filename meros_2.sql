@@ -11,7 +11,7 @@ ORDER BY amivi ASC;
 
 --4c, every detail from friendly matches where we won 
 SELECT * FROM AGWNAS
-WHERE apotelesma = 'nikh' AND eidos_match = 'filiko';
+WHERE apotelesma = 'νίκη' AND eidos_match = 'φιλικό';
 
 -- every detail from matches where we won and it was either a friendly match or the match 1234
 SELECT * FROM AGWNAS
