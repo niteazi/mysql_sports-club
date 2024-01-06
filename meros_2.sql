@@ -13,13 +13,13 @@ ORDER BY amivi ASC;
 SELECT * FROM AGWNAS
 WHERE apotelesma = 'νίκη' AND eidos_match = 'φιλικό';
 
--- every detail from matches where we won and it was either a friendly match or the match 1234
+-- πληροφορίες κάθε αγώνα που είχε αποτέλεσμα νίκη και ήταν φιλικός ή ο αγώνας με κωδικό 1234
 SELECT * FROM AGWNAS
 WHERE apotelesma = 'νίκη' AND (eidos_match = 'φιλικό' OR kwdikos_agwna = 1234);
 
--- every detail from matches where we won and it was either a competitive match or the match 1234
+-- πληροφορίες κάθε αγώνα που είχε αποτέλεσμα νίκη και ήταν αγωνιστικός ή ο αγώνας με κωδικό 1234
 SELECT * FROM AGWNAS
-WHERE apotelesma = 'nikh' AND (eidos_match = 'agwnistiko' OR kwdikos_agwna = 1234);
+WHERE apotelesma = 'νίκη' AND (eidos_match = 'αγωνιστικό' OR kwdikos_agwna = 1234);
 
 
 --^ erwthma 5
