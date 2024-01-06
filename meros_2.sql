@@ -24,7 +24,7 @@ WHERE apotelesma = 'νίκη' AND (eidos_match = 'αγωνιστικό' OR kwdik
 
 --^ erwthma 5
 
---Count the number of matches for each athlete
+--σε πόσους αγώνες έχει συμμετάσχει κάθε αθλητής που έχει λάβει μέρος σε αγώνα τουλάχιστον 1 φορά
 SELECT A8LITIS.aem_athliti,
 A8LITIS.onomateponymo, 
 A8LITIS.athlima, 
@@ -34,41 +34,33 @@ JOIN AGWNES_A8LITI ON A8LITIS.aem_athliti = AGWNES_A8LITI.aem_athliti
 GROUP BY A8LITIS.aem_athliti, A8LITIS.onomateponymo, A8LITIS.athlima;
 
 
---megalytero arithmo theatwn SE AGWNA g kathe athlima
+--ο αγώνας με το μεγαλύτερο αριθμό θεατών ανά άθλημα
 SELECT AGWNAS.athlima, 
 MAX(STATISTIKA.arithmos_theatwn) AS MaxTheatwn
 FROM STATISTIKA
 JOIN AGWNAS ON STATISTIKA.kwdikos_agwna = AGWNAS.kwdikos_agwna
 GROUP BY AGWNAS.athlima;
---TO IDIO ALLA EMFANIZEI K TON KWDIKO AGNWA
-SELECT AGWNAS.athlima, 
-STATISTIKA.kwdikos_agwna, 
-STATISTIKA.arithmos_theatwn AS MaxTheatwn
-FROM STATISTIKA
-JOIN AGWNAS ON STATISTIKA.kwdikos_agwna = AGWNAS.kwdikos_agwna
-WHERE (AGWNAS.athlima, STATISTIKA.arithmos_theatwn) IN (
-  SELECT athlima, MAX(arithmos_theatwn)
-  FROM STATISTIKA
-  JOIN AGWNAS ON STATISTIKA.kwdikos_agwna = AGWNAS.kwdikos_agwna
-  GROUP BY athlima
-);
 
--- 5 min
-
-SELECT SEASON.epoxh, SEASON.etos, MAX(SEASON.synolo_nikwn) AS MaxWins
-FROM SEASON
-GROUP BY SEASON.epoxh, SEASON.etos;
 
 --^ erothma 6 
 
---INNER join αθλητών που έχουν τραυματιστεί, τι άθλημα κάνουν και το τύπο τραυματισμού
-SELECT A8LITIS.aem_athliti, A8LITIS.onomateponymo , A8LITIS.athlima, TRAUMATISMOS.hmeromhnia , TRAUMATISMOS.typos_traumatismou
+--INNER join,εμφάνιση αθλητών που έχουν τραυματιστεί, τι άθλημα κάνουν και το τύπο τραυματισμού
+SELECT 
+A8LITIS.aem_athliti, 
+A8LITIS.onomateponymo , 
+A8LITIS.athlima, 
+TRAUMATISMOS.hmeromhnia , 
+TRAUMATISMOS.typos_traumatismou
 FROM A8LITIS
 INNER JOIN TRAUMATISMOS ON A8LITIS.aem_athliti = TRAUMATISMOS.aem_athliti;
 
---LEFT join εμφάνιση όλων των αθλητών ανεξαρτήτως αν έχουν τραυματιστεί ή όχι
-SELECT A8LITIS.aem_athliti, A8LITIS.onomateponymo, 
-A8LITIS.athlima, TRAUMATISMOS.hmeromhnia, TRAUMATISMOS.typos_traumatismou
+--LEFT join, εμφάνιση όλων των αθλητών ανεξαρτήτως αν έχουν τραυματιστεί ή όχι
+SELECT 
+A8LITIS.aem_athliti, 
+A8LITIS.onomateponymo, 
+A8LITIS.athlima, 
+TRAUMATISMOS.hmeromhnia, 
+TRAUMATISMOS.typos_traumatismou
 FROM A8LITIS
 LEFT JOIN TRAUMATISMOS ON A8LITIS.aem_athliti = TRAUMATISMOS.aem_athliti;
 
