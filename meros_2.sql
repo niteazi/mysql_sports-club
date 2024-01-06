@@ -1,4 +1,4 @@
---TODO erwthma 4
+--^ erwthma 4
 
 --4a, πληροφορίες κάθε αθλητή που το όνομά του ξεκινάει με Σ
 SELECT * FROM A8LITIS
