@@ -9,7 +9,7 @@ SELECT * FROM PROPONHTHS
 WHERE amivi > 900
 ORDER BY amivi ASC;
 
---4c, every detail from friendly matches where we won 
+--4c,πληροφορίες κάθε φιλικού αγώνα με αποτέλεσμα νίκη
 SELECT * FROM AGWNAS
 WHERE apotelesma = 'νίκη' AND eidos_match = 'φιλικό';
 
